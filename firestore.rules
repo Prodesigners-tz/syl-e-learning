@@ -1,0 +1,67 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return isSignedIn() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Churches: mtu yeyote aliye-login anaweza kusoma (kwa dropdown ya
+    // signup — signup yenyewe hufanyika BAADA ya akaunti ya auth kuundwa,
+    // hivyo bado ni signed-in). Ni admin pekee anayeweza kuandika.
+    match /churches/{churchId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Users: kila mtu anasoma/anaandika wasifu wake mwenyewe. Hairuhusiwi
+    // kujiwekea role='admin' au status='approved' wakati wa kujisajili.
+    match /users/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+      // TESTING MODE: status inaruhusiwa kuwa 'approved' moja kwa moja
+      // wakati wa signup (hakuna idhini ya mchungaji kwa sasa). Mtu
+      // hawezi kujiwekea role != 'student' hata hivyo.
+      // Kurudisha pastor-approval baadaye: badilisha mstari ufuatao
+      // kurudi kuwa: request.resource.data.status == 'pending'
+      allow create: if isOwner(uid) &&
+        request.resource.data.role == 'student' &&
+        (request.resource.data.status == 'pending' || request.resource.data.status == 'approved');
+      allow update: if isAdmin() || (isOwner(uid) &&
+        // Mwanachama hawezi kubadili status au role yake mwenyewe.
+        request.resource.data.status == resource.data.status &&
+        request.resource.data.role == resource.data.role);
+
+      match /progress/{moduleId} {
+        allow read: if isOwner(uid) || isAdmin();
+        allow write: if isOwner(uid) || isAdmin();
+      }
+
+      match /attempts/{attemptId} {
+        allow read: if isOwner(uid) || isAdmin();
+        allow create: if isOwner(uid);
+        allow update, delete: if false; // rekodi za majaribio hazibadiliki
+      }
+    }
+
+    // Question bank: wanachama walioidhinishwa wanasoma tu; admin anaandika.
+    match /questionBank/{moduleId}/questions/{questionId} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // Approval tokens: Cloud Functions pekee (Admin SDK inapita rules hizi).
+    match /approvalTokens/{uid} {
+      allow read, write: if false;
+    }
+  }
+}

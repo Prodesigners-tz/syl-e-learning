@@ -1,0 +1,16 @@
+{
+  "name": "syl-elearning-functions",
+  "private": true,
+  "engines": { "node": "20" },
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.3.1",
+    "firebase-functions": "^5.0.1",
+    "nodemailer": "^6.9.14"
+  }
+}
