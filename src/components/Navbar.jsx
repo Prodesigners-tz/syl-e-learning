@@ -16,17 +16,22 @@ export default function Navbar() {
         <span className="badge-dot" />
         SYL — Kiongozi Mwandamizi
       </Link>
+
       <div className="navbar-links">
-        {user && profile?.role === 'admin' && <Link to="/admin/approvals">Admin</Link>}
-        {user && <Link to="/dashboard">Kozi Zangu</Link>}
-        {user && <Link to="/certificate">Cheti</Link>}
-        {user ? (
+        {user && profile?.role === 'admin' && (
+          <Link to="/admin/approvals">Admin</Link>
+        )}
+
+        {user && (
+          <Link to="/dashboard">Kozi Zangu</Link>
+        )}
+
+        {user && (
+          <Link to="/certificate">Cheti</Link>
+        )}
+
+        {user && (
           <button onClick={handleLogout}>Toka</button>
-        ) : (
-          <>
-            <Link to="/login">Ingia</Link>
-            <Link to="/signup">Jisajili</Link>
-          </>
         )}
       </div>
     </nav>
