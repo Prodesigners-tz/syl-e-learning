@@ -306,20 +306,6 @@ export const QUESTION_BANK_SAMPLE = {
   semina2: [
     {
       id: 'semina2-q1',
-      text: 'Semina ya 2 inasisitiza nini kuhusu akili ya vijana wadogo?',
-      options: [
-        'Imekamilika kabisa kufikia miaka 12',
-        'Bado haijakamilika, hasa sehemu inayohusika na uamuzi',
-        'Haihusiani na maamuzi',
-        'Ni sawa na ya watu wazima',
-      ],
-      correctIndex: 1,
-    },
-  ],
-
-  semina2: [
-    {
-      id: 'semina2-q1',
       text: 'Kulingana na maelezo ya Abigail Baird, ukuaji wa ubongo wa mwanadamu huendelea hadi lini?',
       options: [
         'Hadi miaka 10',
@@ -403,6 +389,17 @@ export const QUESTION_BANK_SAMPLE = {
         'Kwa sababu aliwafahamu na kuwakaribia katika hali yao',
         'Kwa sababu aliwaahidi nafasi za uongozi',
         'Kwa sababu aliwaficha Mafarisayo'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q9',
+      text: 'Semina ya 2 inasisitiza nini kuhusu akili ya vijana wadogo?',
+      options: [
+        'Imekamilika kabisa kufikia miaka 12',
+        'Bado haijakamilika, hasa sehemu inayohusika na uamuzi',
+        'Haihusiani na maamuzi',
+        'Ni sawa na ya watu wazima',
       ],
       correctIndex: 1,
     },
