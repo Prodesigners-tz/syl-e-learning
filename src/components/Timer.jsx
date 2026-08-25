@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { QUESTION_TIME_SECONDS } from '../utils/quizLogic'
 
-/**
- * Muda wa kuhesabu chini kwa kila swali. Inapofika sifuri,
- * `onExpire` inaitwa kiotomatiki (swali linapita hata bila jibu).
- * `resetKey` ibadilishwe kila swali jipya ili timer ianze upya.
- */
 export default function Timer({ resetKey, onExpire }) {
-  const [secondsLeft, setSecondsLeft] = useState(QUESTION_TIME_SECONDS)
+  const [secondsLeft, setSecondsLeft] = useState(
+    QUESTION_TIME_SECONDS
+  )
+
   const expiredRef = useRef(false)
 
   useEffect(() => {
@@ -21,14 +19,23 @@ export default function Timer({ resetKey, onExpire }) {
         expiredRef.current = true
         onExpire()
       }
+
       return
     }
-    const t = setTimeout(() => setSecondsLeft((s) => s - 1), 1000)
-    return () => clearTimeout(t)
+
+    const timer = setTimeout(() => {
+      setSecondsLeft((seconds) => seconds - 1)
+    }, 1000)
+
+    return () => clearTimeout(timer)
   }, [secondsLeft, onExpire])
 
   return (
-    <div className={`quiz-timer ${secondsLeft <= 3 ? 'low' : ''}`}>
+    <div
+      className={`quiz-timer ${
+        secondsLeft <= 3 ? 'low' : ''
+      }`}
+    >
       {secondsLeft}s
     </div>
   )

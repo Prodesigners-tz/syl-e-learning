@@ -1,30 +1,16 @@
-// MFANO wa muundo wa benki ya maswali — bado HAIJAJAA maswali yote.
-// Hizi ni sampuli chache tu kuonyesha schema sahihi. Baada ya kupitia
-// na kusahihisha notes (public/content/notes/*.md), maswali kamili ya
-// kila moduli yataongezwa hapa au (vizuri zaidi kwa uzalishaji) kwenye
-// Firestore collection `questionBank/{moduleId}/questions`.
-//
-// Schema ya kila swali:
-// {
-//   id: string (kipekee ndani ya moduli),
-//   text: string,
-//   options: string[] (chaguo 4),
-//   correctIndex: number (0-3),
-// }
-
 export const QUESTION_BANK_SAMPLE = {
   semina1: [
     {
       id: 'semina1-q1',
-      text: 'Idara ya Vijana Waadventista inahusiana na unabii gani wa Biblia kuhusu mioyo ya baba na watoto?',
-      options: ['Isaya 40', 'Malaki 4', 'Yohana 3', 'Mathayo 5'],
-      correctIndex: 1,
+      text: 'Kanisa la Waadventista wa Sabato lilifikia kuwa na muundo wa msingi wa kanisa mnamo mwaka gani?',
+      options: ['1844', '1850', '1861', '1907'],
+      correctIndex: 2,
     },
     {
       id: 'semina1-q2',
-      text: 'Kwa mujibu wa muundo wa Kanisa la Waadventista, ni ipi kati ya hizi iko juu zaidi ya "Konferensi"?',
-      options: ['Kanisa Mahalia', 'Unioni', 'Divisheni', 'Konferensi Kuu'],
-      correctIndex: 2,
+      text: 'Kanisa la Waadventista wa Sabato linajengwa kwa misingi ya kiunabii inayohusishwa sana na kitabu gani?',
+      options: ['Ufunuo', 'Mithali', 'Matendo', 'Warumi'],
+      correctIndex: 0,
     },
     {
       id: 'semina1-q3',
@@ -32,7 +18,291 @@ export const QUESTION_BANK_SAMPLE = {
       options: ['15', '17', '21', '25'],
       correctIndex: 1,
     },
+    {
+      id: 'semina1-q4',
+      text: 'Ni unabii gani unaohusishwa na kugeuzwa kwa mioyo ya baba kuelekea watoto na ya watoto kuelekea wazazi?',
+      options: ['Malaki 4', 'Isaya 53', 'Danieli 7', 'Yohana 14'],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina1-q5',
+      text: 'Ellen White alitoa wito wenye nguvu kwa kanisa lote kutoka Australia mnamo tarehe gani?',
+      options: ['Desemba 19, 1892', 'Mei 29, 1893', 'Januari 1, 1901', 'Julai 7, 1907'],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina1-q6',
+      text: 'Harry Fenner alikuwa na umri gani alipoanza kupanga kazi ya vijana pamoja na Luther Warren?',
+      options: ['14', '16', '18', '20'],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q7',
+      text: 'Luther Warren alikuwa na umri gani wakati yeye na Harry Fenner walipoanza kazi ya vijana?',
+      options: ['12', '14', '16', '18'],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q8',
+      text: 'Muundo wa kwanza wa vijana katika kanisa la Waadventista wa Sabato mahalia ulianza mwaka gani?',
+      options: ['1861', '1879', '1893', '1907'],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q9',
+      text: 'Mikutano ya kwanza ya vijana ilifanyika katika eneo gani?',
+      options: ['Riverside, California', 'Hazelton, Michigan', 'San Francisco', 'Zurich'],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q10',
+      text: 'Mwaka 1901 Konferensi Kuu ilipiga kura kuanzisha rasmi chama cha vijana chini ya idara gani?',
+      options: ['Shule ya Sabato', 'Huduma za Afya', 'Uinjilisti', 'Huduma za Familia'],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina1-q11',
+      text: 'Idara ya Vijana ndani ya Konferensi Kuu iliidhinishwa rasmi katika mkutano gani?',
+      options: ['Mkutano wa 1879', 'Mkutano wa 1901', 'Mkutano wa 1907', 'Mkutano wa 1922'],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina1-q12',
+      text: 'Mkurugenzi wa kwanza wa Vijana katika Konferensi Kuu alikuwa nani?',
+      options: ['John Hancock', 'M. E. Kern', 'Luther Warren', 'C. Lester Bond'],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q13',
+      text: 'Jina la idara lililokubaliwa mwaka 1907 lilikuwa lipi?',
+      options: [
+        'Idara ya Huduma za Vijana',
+        'Idara ya Wamisionari wa Kujitolea ya Vijana Waadventista wa Sabato',
+        'Idara ya Vijana Wakubwa',
+        'Idara ya Watafuta Njia',
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q14',
+      text: 'Masomo ya JMV yaliingizwa katika idara ya vijana mwaka gani?',
+      options: ['1907', '1915', '1922', '1931'],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina1-q15',
+      text: 'Kongresi ya kwanza ya vijana ya Divisheni ya Marekani ya Kaskazini ilifanyika mwaka gani?',
+      correctIndex: 2,
+    },
+    {
+      id: 'semina1-q16',
+      text: 'Kongresi ya Vijana Ulimwenguni ya kwanza ilifanyika wapi mwaka 1969?',
+
+      options: ['San Francisco', 'Zurich, Uswisi', 'Riverside', 'Michigan'],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q17',
+      text: 'Mpango Bora wa Usomaji wa Tabia ambao baadaye ulibadilishwa kuwa Urafiki ulikubaliwa mwaka gani?',
+      options: ['1922', '1931', '1946', '1950'],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina1-q18',
+      text: 'Chama cha kwanza cha Watafuta Njia kilichoandaliwa na John Hancock kilianzishwa mwaka gani?',
+      options: ['1931', '1946', '1950', '1969'],
+      correctIndex: 1,
+
+    },
+    {
+      id: 'semina1-q19',
+      text: 'Konferensi Kuu iliukubali rasmi mfumo wa chama cha Watafuta Njia mwaka gani?',
+      options: ['1946', '1949', '1950', '1969'],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina1-q20',
+      text: 'Mfumo wa madarasa ya vijana ulihusisha maeneo gani mbalimbali ya ukuaji?',
+      options: [
+        'Masomo ya Biblia pekee',
+        'Michezo pekee',
+        'Kimwili, kiakili, kiroho na kijamii',
+        'Masomo ya shule pekee',
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina1-q21',
+      text: 'Mwaka 1922 madarasa mangapi ya kazi endelevu ya darasani yalitolewa mwanzoni?',
+      options: ['Madarasa mawili', 'Madarasa matatu', 'Madarasa manne', 'Madarasa matano'],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina1-q22',
+      text: 'Baraza la Konferensi Kuu la mwaka 1927 lilipanua kazi endelevu ya darasani kuwa na madarasa gani?',
+      options: [
+        'Rafiki, Mwenzi na Komredi',
+        'Msaidizi, Kiongozi na Mwalimu',
+        'Wavumbuzi, Mabalozi na Watafuta Njia',
+        'Rafiki, Kiongozi na Mshauri',
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina1-q23',
+      text: 'C. Lester Bond alijiunga na Idara ya Wamisionari wa Kujitolea mwaka gani?',
+      options: ['1922', '1927', '1928', '1931'],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina1-q24',
+      text: 'Komredi Mkuu wa kwanza alivishwa pini mwaka gani?',
+      options: ['1928', '1931', '1946', '1950'],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q25',
+      text: 'Jina la idara lilibadilika kuwa “Idara ya Vijana ya Wamisionari wa Kujitolea” mwaka gani?',
+      options: ['1950', '1969', '1972', '1978'],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina1-q26',
+      text: 'Mwaka 1978 jina la idara lilibadilika kuwa nini?',
+      options: [
+        'Vijana Waadventista-AY',
+        'Huduma za Vijana Waadventista-AYM',
+        'Wamisionari Vijana',
+        'Huduma za Vijana Wakubwa',
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina1-q27',
+      text: 'Mwaka 2005 Konferensi Kuu ilipitisha jina gani la idara?',
+      options: [
+        'Vijana Waadventista',
+        'Idara ya Huduma za Vijana',
+        'Wamisionari wa Kujitolea',
+        'Huduma za Vijana Wakubwa',
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q28',
+      text: 'Mwaka 2015 jina la idara lilikubaliwa kuwa nini?',
+      options: [
+        'Youth Ministry',
+        'Adventist Youth Ministries (AYM)',
+        'Adventist Young People',
+        'Youth Missionary Department',
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q29',
+      text: 'Falsafa ya AYM imejengwa kwa msingi gani mkuu?',
+      options: [
+        'Mafanikio ya kielimu',
+        'Ufunuo wa kibiblia kuhusu Yesu Kristo',
+        'Michezo ya vijana',
+        'Uongozi wa kanisa pekee',
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q30',
+      text: 'Tamko la utume la AYM linataka kufanya nini kwa vijana?',
+      options: [
+        'Kuwaandaa kwa ajira pekee',
+        'Kuwaongoza katika uhusiano wenye kuleta wokovu pamoja na Yesu na kuwasaidia kuwa wanafunzi',
+        'Kuwafundisha michezo',
+        'Kuwatayarisha kwa masomo ya chuo',
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q31',
+      text: 'Kwa mujibu wa Matendo 2:42-47, ni vikosi vingapi vya nguvu vilivyozunguka ukuaji wa kanisa la awali?',
+      options: ['Mbili', 'Tatu', 'Nne', 'Tano'],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina1-q32',
+      text: 'Ni ipi kati ya hizi ni mojawapo ya vikosi vinne vya ukuaji wa kanisa la awali?',
+      options: ['Biashara', 'Neema', 'Siasa', 'Mashindano'],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q33',
+      text: 'Moja ya malengo ya Ellen G. White kwa idara ya vijana ilikuwa nini?',
+      options: [
+        'Kuwafundisha vijana wafanye kazi kwa ajili ya vijana wengine',
+        'Kuwazuia vijana kushiriki kanisani',
+        'Kuwatenga vijana na watu wazima',
+        'Kuwafundisha biashara pekee',
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina1-q34',
+      text: 'M. E. Kern aliweka malengo gani mwaka 1907?',
+      options: [
+        'Kuinua kiwango cha maisha ya ibada ya kijana',
+        'Kupunguza shughuli za vijana',
+        'Kuwazuia vijana kufanya uinjilisti',
+        'Kuwatenga vijana na kanisa',
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina1-q35',
+      text: 'Huduma ya Wavumbuzi inawahudumia watoto wa umri gani?',
+      options: ['Miaka 2-3', 'Miaka 4-9', 'Miaka 10-15', 'Miaka 16-21'],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q36',
+      text: 'Huduma za Watafuta Njia zinawalenga vijana wa umri gani?',
+      options: ['Miaka 4-9', 'Miaka 8-12', 'Miaka 10-15', 'Miaka 16-21'],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina1-q37',
+      text: 'Huduma ya Mabalozi imekusudiwa zaidi kwa vijana wa umri gani?',
+      options: ['Miaka 10-15', 'Miaka 16-21', 'Miaka 22-30', 'Miaka 30-40'],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q38',
+      text: 'Vijana Wakubwa katika muundo wa AYM wanahusisha zaidi umri gani?',
+      options: ['Miaka 10-15', 'Miaka 16-21', 'Miaka 22-30', 'Miaka 30-40'],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina1-q39',
+      text: 'Moto wa Huduma za Vijana Wakubwa wa AYM ni upi?',
+      options: [
+        'Kristo anakuja hivi karibuni',
+        'Upendo wa Kristo wanibidisha',
+        'Tenda kazi kwa bidii',
+        'Vijana kwa ajili ya vijana',
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina1-q40',
+      text: 'Ahadi ya Huduma za Vijana Waadventista inahusisha nini?',
+      options: [
+        'Kuwa na juhudi katika kazi za AYM, kusaidia wengine na kumaliza kazi ya injili ulimwenguni',
+        'Kusoma Biblia peke yake',
+        'Kushiriki kanisani mara moja kwa mwezi',
+        'Kufanya kazi kwa ajili ya vijana wa kanisa pekee',
+      ],
+      correctIndex: 0,
+    },
   ],
+
   semina2: [
     {
       id: 'semina2-q1',
