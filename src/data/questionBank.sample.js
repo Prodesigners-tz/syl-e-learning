@@ -316,4 +316,438 @@ export const QUESTION_BANK_SAMPLE = {
       correctIndex: 1,
     },
   ],
-}
+
+  semina2: [
+    {
+      id: 'semina2-q1',
+      text: 'Kulingana na maelezo ya Abigail Baird, ukuaji wa ubongo wa mwanadamu huendelea hadi lini?',
+      options: [
+        'Hadi miaka 10',
+        'Hadi miaka ya awali ya ishirini',
+        'Hadi miaka 15',
+        'Hadi miaka 30'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q2',
+      text: 'Kwa nini vijana wanaweza kutenda wakati mwingine kama watu wazima na wakati mwingine kama watoto?',
+      options: [
+        'Kwa sababu hawajui sheria za kanisa',
+        'Kwa sababu hawapendi watu wazima',
+        'Kwa sababu bado wako katika hatua ya ukuaji na ubongo wao haujakamilika',
+        'Kwa sababu hawajawahi kwenda shule'
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina2-q3',
+      text: 'Ni jambo gani muhimu kwa kiongozi wa vijana katika ulimwengu wa leo?',
+      options: [
+        'Kuwatenga vijana na watu wazima',
+        'Kuingia katika ulimwengu wa vijana na kuuelewa',
+        'Kuwazuia vijana kutumia teknolojia',
+        'Kuwaamuru vijana kufuata kila jambo la zamani'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q4',
+      text: 'Kwa nini ni muhimu kuelewa utamaduni wa vijana?',
+      options: [
+        'Ili kuwazuia vijana kufanya maamuzi',
+        'Ili kuwaonyesha vijana kwamba watu wazima ni bora',
+        'Ili kuwavutia, kuwajali na kuwahifadhi katika jumuiya ya kanisa',
+        'Ili kuondoa shughuli za vijana kanisani'
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina2-q5',
+      text: 'Mfano mkuu wa Biblia wa kuingia katika mazingira ya watu ili kuwafikia ni nani?',
+      options: [
+        'Musa',
+        'Paulo',
+        'Petro',
+        'Yesu Kristo'
+      ],
+      correctIndex: 3,
+    },
+    {
+      id: 'semina2-q6',
+      text: 'Yesu alifanya nini ili kufahamu hali ya mwanadamu?',
+      options: [
+        'Alibaki mbinguni na kuwatuma malaika',
+        'Alikuja duniani na kuishi kama mwanadamu',
+        'Aliwatenga wenye dhambi',
+        'Aliepuka kuhusiana na jamii'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q7',
+      text: 'Katika Mathayo 9:9-13, Yesu alikula pamoja na kundi gani la watu?',
+      options: [
+        'Wafalme na watawala',
+        'Mafarisayo pekee',
+        'Watoza ushuru na wenye dhambi',
+        'Makuhani pekee'
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina2-q8',
+      text: 'Kwa nini watoza ushuru na wenye dhambi walivutwa kwa Yesu?',
+      options: [
+        'Kwa sababu aliwapa fedha',
+        'Kwa sababu aliwafahamu na kuwakaribia katika hali yao',
+        'Kwa sababu aliwaahidi nafasi za uongozi',
+        'Kwa sababu aliwaficha Mafarisayo'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q10',
+      text: 'Kwa nini Paulo alisema alifanya mambo yote kwa ajili ya Injili?',
+      options: [
+        'Ili awe maarufu',
+        'Ili kupata mali',
+        'Ili kuishiriki Injili pamoja na wengine',
+        'Ili kupata madaraka'
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina2-q11',
+      text: 'Kulingana na Ellen White, ni mbinu gani pekee itakayotoa mafanikio ya kweli katika kuwafikia watu?',
+      options: [
+        'Mbinu ya Kristo',
+
+        'Mbinu ya kulazimisha',
+        'Mbinu ya kuwaadhibu',
+        'Mbinu ya kuwatenga'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina2-q12',
+      text: 'Katika mbinu ya Kristo, Mwokozi alifanya nini kabla ya kuwaambia watu “Nifuateni”?',
+      options: [
+        'Aliwapa mali',
+
+        'Alijichanganya nao, aliwahurumia na kuhudumia mahitaji yao',
+        'Aliwakosoa hadharani',
+        'Aliwatenga na jamii'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q13',
+      text: 'Ni nini mara nyingi kinaweza kuleta wokovu kwa wale walio chini ya majaribu ya yule mwovu?',
+      options: [
+        'Adhabu kali',
+        'Kuwatenga na jamii',
+        'Wema, uungwana, huruma na upendo',
+        'Kuwapuuza'
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina2-q14',
+      text: 'Ellen White anashauri dini ifanyweje kwa ajili ya vijana?',
+      options: [
+        'Ifichwe kwa vijana',
+        'Ifanywe kuwa ya kupendeza kwa vijana',
+        'Iwekwe mbali na shughuli zao',
+        'Ifundishwe kwa watu wazima pekee'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q15',
+      text: 'Kwa nini vijana wanahitaji kusaidiwa kuendeleza vipaji vyao?',
+      options: [
+        'Kwa sababu hawana uwezo wa kimwili',
+        'Kwa sababu vipaji vingi walivyopewa na Mungu havitumiki',
+        'Kwa sababu hawapendi kufanya kazi',
+        'Kwa sababu hawahitaji elimu'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q16',
+      text: 'Ni jambo gani la kwanza linalopendekezwa katika mbinu za kiutendaji za kuwahudumia vijana?',
+      options: [
+        'Kuwafundisha kwa adhabu',
+        'Kufahamu mazingira ya vijana',
+        'Kuwatenga na teknolojia',
+        'Kuwazuia kushiriki kanisani'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q17',
+      text: 'Mazingira ya vijana yanaweza kuathiri mambo gani?',
+      options: [
+        'Mavazi na mwonekano pekee',
+        'Masomo pekee',
+        'Matamanio, mahitaji, hisia, mahusiano na maisha ya kiroho',
+        'Urefu wao pekee'
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina2-q18',
+      text: 'Ni kitu gani kinachotambulisha kizazi cha vijana wa leo kwa kiasi kikubwa?',
+      options: [
+        'Kutotumia mawasiliano',
+        'Matumizi ya teknolojia mpya ya mawasiliano',
+        'Kuepuka simu za mkononi',
+        'Kuishi bila mitandao'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q19',
+      text: 'Kwa nini safari katika ulimwengu wa vijana ni muhimu kwa kanisa?',
+      options: [
+        'Ili kanisa liache mafundisho yake',
+        'Ili kuwafahamu, kuwakubali na kuwaongoza vijana',
+        'Ili vijana wawe viongozi pekee',
+        'Ili watu wazima waache kushiriki kanisani'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q20',
+      text: 'Ni vyanzo gani vinne vya uwezo wa vijana vilivyoainishwa katika semina?',
+      options: [
+        'Familia, shule, jamii na vyombo vya habari',
+        'Kanisa, hospitali, serikali na michezo',
+        'Familia, biashara, siasa na michezo',
+        'Shule, benki, serikali na kanisa'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina2-q21',
+      text: 'Chanzo cha kwanza cha uwezo wa kijana, hasa akiwa bado nyumbani, ni kipi?',
+      options: [
+        'Vyombo vya habari',
+        'Marafiki',
+        'Familia',
+        'Serikali'
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina2-q22',
+      text: 'Shule huathiri maisha ya vijana kupitia nini?',
+      options: [
+        'Walimu, wanachojifunza na marafiki',
+        'Michezo pekee',
+        'Chakula wanachokula',
+        'Mavazi pekee'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina2-q23',
+      text: 'Ni kwa nini jamii ina athari kubwa katika maisha ya vijana?',
+      options: [
+        'Kwa sababu vijana wanaelekea kuwa katika makundi',
+        'Kwa sababu vijana hawana familia',
+        'Kwa sababu jamii huwalazimisha kusoma',
+        'Kwa sababu vijana hawawezi kufanya maamuzi'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina2-q24',
+      text: 'Ni vyombo gani vya habari vilivyotajwa kuwa na ushawishi mkubwa kwa vijana leo?',
+      options: [
+        'Magazeti pekee',
+        'Redio pekee',
+        'Runinga, intaneti na simu za mkononi',
+        'Vitabu vya shule pekee'
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina2-q25',
+      text: 'Vijana wanatafuta kutambuliwa kama nini katika kanisa?',
+      options: [
+        'Wageni',
+        'Sehemu ya familia ya kanisa',
+        'Watazamaji',
+        'Watu wasiokuwa na majukumu'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q26',
+      text: 'Vijana wanawatafuta viongozi ambao wanaweza kufanya nini?',
+      options: [
+        'Kuwakemea kila mara',
+        'Kuwasiliana nao kwa ujasiri kuhusu ukweli wa maisha yao',
+        'Kuwazuia kusema mawazo yao',
+        'Kuwatenga na watu wazima'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q27',
+      text: 'Vijana wanahitaji mfumo unaowaruhusu kufanya nini?',
+      options: [
+        'Kukaa kimya wakati wote',
+        'Kusema wanachofikiri bila kuadhibiwa au kugombezwa',
+        'Kukataa mafundisho yote',
+        'Kuendesha kanisa bila viongozi'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q28',
+      text: 'Kwa nini vijana wanatafuta njia mpya na ubunifu katika kanisa?',
+      options: [
+        'Wanataka kanisa lisikue',
+        'Wana maono na malengo ambayo wakati mwingine ni tofauti na yaliyopo',
+        'Hawapendi kanisa',
+        'Wanataka kuondoa viongozi wote'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q29',
+      text: 'Ni jambo gani la kwanza linalopendekezwa ili kuingia katika ulimwengu wa vijana?',
+      options: [
+        'Kuandaa mikutano ya mara kwa mara kujadili matatizo yao na kusikiliza maoni yao',
+        'Kuwafukuza vijana wanaolalamika',
+        'Kuwapa adhabu',
+        'Kuwazuia kuzungumza'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina2-q30',
+      text: 'Kwa nini viongozi wanapaswa kuwaruhusu vijana kuelezea mihemko na hisia zao?',
+      options: [
+        'Kwa sababu kila tabia yao ni sahihi',
+        'Kwa sababu tabia hasi inaweza kutokana na uchungu wa ndani',
+        'Kwa sababu hawahitaji kuongozwa',
+        'Kwa sababu hawapaswi kusikilizwa'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q31',
+      text: 'Ni tabia gani viongozi wanapaswa kujenga wanaposhughulika na vijana?',
+      options: [
+        'Kuwasikiliza badala ya kusema nao muda wote',
+        'Kuwapuuza',
+        'Kuwakatisha wanapozungumza',
+        'Kuwapa hotuba kila wakati'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina2-q32',
+      text: 'Kwa nini ni muhimu kuandaa programu na shughuli zisizo rasmi pamoja na vijana?',
+      options: [
+        'Ili kupoteza muda',
+        'Ili kupata muda wa kuwa pamoja na kufurahia pamoja',
+        'Ili vijana waache shule',
+        'Ili kuondoa ibada'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q33',
+      text: 'Ni nini kinachoweza kuwafanya vijana wajisikie kuwa sehemu ya kanisa?',
+      options: [
+        'Mazingira ambayo yanawafanya wajisikie wamekubalika na ni muhimu',
+        'Kuwazuia kushiriki',
+        'Kuwapa majukumu bila kusikiliza',
+        'Kuwatenga na watu wazima'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina2-q34',
+      text: 'Kwa nini vijana wanapaswa kuruhusiwa kuongoza programu mbalimbali?',
+      options: [
+        'Ili viongozi wazima wasifanye kazi',
+        'Ili kuwapa ari na nafasi ya kuanzisha mambo',
+        'Ili kuondoa ibada',
+        'Ili kuwafanya washindane na kanisa'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q35',
+      text: 'Shughuli zinazojumuisha vijana na watu wazima zinaweza kuleta faida gani?',
+      options: [
+        'Kutenganisha vizazi',
+        'Kujenga ufahamu wa pande mbili na kila mmoja kujifunza kutoka kwa mwingine',
+        'Kuwafanya vijana waache kanisa',
+        'Kuondoa utamaduni wa vijana'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q36',
+      text: 'Kulingana na hitimisho la semina, lengo kuu la huduma kwa vijana ni lipi?',
+      options: [
+        'Kuwafanya vijana kuwa maarufu',
+        'Kuwasaidia kukuza uhusiano wa karibu na Kristo',
+        'Kuwafanya vijana wawe viongozi wote',
+        'Kuwapa burudani pekee'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q37',
+      text: 'Tunapaswa kumwomba Bwana atupe nini katika kazi ya vijana?',
+      options: [
+        'Mali nyingi',
+        'Hekima na mapenzi makubwa kwa ajili ya kazi ya vijana',
+        'Umaarufu',
+        'Madaraka'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q38',
+      text: 'Katika Sehemu ya 2 ya mazoezi, mshiriki anatakiwa kutumia mbinu alizojifunza kwa muda gani?',
+      options: [
+        'Wiki moja',
+        'Mwezi mmoja',
+        'Robo moja',
+        'Miaka miwili'
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina2-q39',
+      text: 'Katika mazoezi ya Sehemu ya 1, mshiriki anatakiwa kufanya nini kuhusu majibu yake?',
+      options: [
+        'Kuyafuta mara moja',
+        'Kuweka majibu katika sehemu salama ili ayatumie baadaye',
+        'Kuwapa viongozi wote',
+        'Kuyachapisha mtandaoni'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina2-q40',
+      text: 'Baada ya robo moja katika Sehemu ya 2, mshiriki anatakiwa kufanya nini?',
+      options: [
+        'Kuacha kuwahudumia vijana',
+        'Kulinganisha uelewa wake wa awali na kile alichogundua kuhusu vijana',
+        'Kuanza semina nyingine bila tathmini',
+        'Kuwahoji vijana siku ya kwanza tu'
+      ],
+      correctIndex: 1,
+    },
+  ],
+};
