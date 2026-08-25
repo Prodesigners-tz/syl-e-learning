@@ -21,13 +21,9 @@ export default function Dashboard() {
     if (user) loadProgress()
   }, [user])
 
-  function statusFor(module, index) {
+  function statusFor(module) {
     const p = progressMap[module.id]
     if (p?.status === 'passed') return 'passed'
-    if (index === 0) return p?.status === 'failed' ? 'failed' : 'available'
-    const prevModule = MODULES[index - 1]
-    const prevPassed = progressMap[prevModule.id]?.status === 'passed'
-    if (!prevPassed) return 'locked'
     return p?.status === 'failed' ? 'failed' : 'available'
   }
 
@@ -48,7 +44,7 @@ export default function Dashboard() {
       ) : (
         <div className="module-grid">
           {MODULES.map((m, i) => {
-            const status = statusFor(m, i)
+            const status = statusFor(m)
             const locked = status === 'locked'
             const card = (
               <div className="module-card" key={m.id} style={locked ? { opacity: 0.6 } : {}}>
