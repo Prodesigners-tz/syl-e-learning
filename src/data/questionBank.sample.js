@@ -750,4 +750,447 @@ export const QUESTION_BANK_SAMPLE = {
       correctIndex: 1,
     },
   ],
+
+  semina3: [
+    {
+      id: 'semina3-q1',
+      text: 'Lengo kuu la huduma maalum ya vijana ni nini?',
+      options: [
+        'Kuwatenga vijana na watu wazima',
+        'Kushughulikia mahitaji ya vijana na kuwashirikisha katika ushirika wa kanisa',
+        'Kuwapa vijana burudani pekee',
+        'Kuwafanya vijana waongoze kila huduma ya kanisa'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q2',
+      text: 'Huduma ya vijana inapaswa kuwashirikisha vijana katika nini?',
+      options: [
+        'Majadiliano, makongamano na mafunzo ya wazi',
+        'Mashindano pekee',
+        'Shughuli za kifedha pekee',
+        'Mikutano ya viongozi tu'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q3',
+      text: 'Kwa mujibu wa utafiti uliotajwa wa Barna Group, ni asilimia gani ya waliolelewa kanisani ilikadiriwa kujitenga wafikapo umri wa miaka 29?',
+      options: [
+        '20%',
+        '40%',
+        '60%',
+        '80%'
+      ],
+      correctIndex: 3,
+    },
+    {
+      id: 'semina3-q4',
+      text: 'Kwa nini matokeo ya utafiti kuhusu vijana yanapaswa kulitisha kanisa?',
+      options: [
+        'Kwa sababu vijana hawapendi kusoma',
+        'Kwa sababu yanaonyesha changamoto kubwa katika kuendelea kwa vijana katika maisha ya kanisa',
+        'Kwa sababu vijana wanataka kuwa viongozi wote',
+        'Kwa sababu vijana hawatumii teknolojia'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q5',
+      text: 'Huduma ya vijana inapaswa kuwashughulikia vijana katika mazingira gani?',
+      options: [
+        'Mazingira yao wenyewe',
+        'Mazingira ya viongozi pekee',
+        'Mazingira ya shule pekee',
+        'Mazingira ya mtandao pekee'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q6',
+      text: 'Ni jambo gani vijana wanahitaji ili waweze kueleza mashaka na changamoto zao?',
+      options: [
+        'Mahali pa ushindani',
+        'Mahali pa kulazimishwa',
+        'Mahali salama pasipo hofu ya kuhukumiwa au kukataliwa',
+        'Mahali pa kujitenga na kanisa'
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina3-q7',
+      text: 'Kulingana na Ellen White katika kitabu Education, kazi ya elimu ya kweli ni nini?',
+      options: [
+        'Kuwafundisha vijana kukariri mawazo ya wengine',
+        'Kukuza uwezo wa kufikiri na kutenda',
+        'Kuwazuia vijana kuuliza maswali',
+        'Kuwafanya vijana wategemee viongozi'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q8',
+      text: 'Viongozi wa vijana wanapaswa kuwasaidia vijana kukuza nini?',
+      options: [
+        'Uwezo wa kufikiri',
+        'Uwezo wa kukaa kimya',
+        'Utegemezi kwa viongozi',
+        'Ushindani wa madaraka'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q9',
+      text: 'Tim Elmore anamwelezea kijana wa leo kama kizazi gani?',
+      options: [
+        'Kilichotengwa na jamii',
+        'Kilichounganishwa kupita kiasi, kilicholindwa kupita kiasi na kutumikiwa kupita kiasi',
+        'Kisichopenda teknolojia',
+        'Kinachoishi bila mahusiano'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q10',
+      text: 'Akronimi EPIC inayotajwa katika semina inaeleza nini?',
+      options: [
+        'Sifa muhimu za kizazi cha vijana',
+        'Aina za mitihani ya vijana',
+        'Majina ya idara za kanisa',
+        'Aina za huduma za fedha'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q11',
+      text: 'Herufi E katika EPIC inahusishwa na nini?',
+      options: [
+        'Experience — uzoefu',
+        'Education — elimu',
+        'Evangelism — uinjilisti',
+        'Energy — nguvu'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q12',
+      text: 'Kwa nini vijana wa kizazi hiki wanahitaji kujifunza kutoka kwa mtu mwenye uzoefu?',
+      options: [
+        'Kwa sababu hawapendi walimu',
+        'Kwa sababu wanathamini kujifunza kupitia uzoefu halisi',
+        'Kwa sababu hawahitaji Biblia',
+        'Kwa sababu hawataki kufanya kazi'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q13',
+      text: 'Herufi P katika EPIC inahusishwa na nini?',
+      options: [
+        'Participatory — shirikishi',
+        'Private — binafsi',
+        'Passive — kutoshiriki',
+        'Political — kisiasa'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q14',
+      text: 'Kwa mujibu wa semina, kizazi cha leo kimelelewa katika zama ambazo burudani na nini vimefumwa pamoja?',
+      options: [
+        'Kilimo',
+        'Teknolojia',
+        'Biashara',
+        'Siasa'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q15',
+      text: 'Herufi I katika EPIC inahusishwa na nini?',
+      options: [
+        'Wamesheheni taswira',
+        'Wametengwa',
+        'Wamechoka',
+        'Wamejificha'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q16',
+      text: 'Ni mitandao ipi imetajwa kama sehemu ya mazingira ya vijana wa leo?',
+      options: [
+        'Facebook, Instagram, Twitter na Snapchat',
+        'Barua pepe pekee',
+        'Redio pekee',
+        'Magazeti pekee'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q17',
+      text: 'Herufi C katika EPIC inahusishwa na nini?',
+      options: [
+        'Competition',
+        'Connected — kuunganishwa',
+        'Culture',
+        'Church'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q18',
+      text: 'Kizazi hiki kimeunganishwa kijamii na nini?',
+      options: [
+        'Kiteknolojia',
+        'Kisiasa pekee',
+        'Kifedha pekee',
+        'Kijiografia pekee'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q19',
+      text: 'Kwa nini viongozi wa vijana wanapaswa kuelewa nguvu ya mitandao ya kijamii?',
+      options: [
+        'Kwa sababu mitandao ndiyo kanisa',
+        'Kwa sababu ni sehemu muhimu ya utamaduni na muunganiko wa vijana wa leo',
+        'Kwa sababu Biblia inahitaji mitandao',
+        'Kwa sababu vijana hawapendi kukutana'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q20',
+      text: 'Kiongozi wa vijana anaweza kutumia zama za muunganisho kuanzisha nini?',
+      options: [
+        'Jamii ya wanafunzi wa Kristo na ushirika ulimwenguni',
+        'Ushindani wa makanisa',
+        'Makundi ya siri',
+        'Mfumo wa kuwaweka vijana mbali'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q21',
+      text: 'Moja ya njia za kubadilisha hali ya sasa ni kuwashirikisha vijana katika nini?',
+      options: [
+        'Majadiliano na kongamano',
+        'Adhabu',
+        'Mashindano ya fedha',
+        'Mikutano ya siri'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q22',
+      text: 'Malalamiko sita ya wamilenia dhidi ya kanisa yalihusisha suala gani?',
+      options: [
+        'Kanisa kuwa na uvumilivu mkubwa kwa mashaka',
+        'Kanisa kuonekana kuwa halina uvumilivu juu ya shaka',
+        'Kanisa kutokuwa na mafundisho',
+        'Kanisa kutokuwa na viongozi'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q23',
+      text: 'Kwa mujibu wa malalamiko yaliyotajwa, kanisa lilionekana vipi katika mahusiano yake?',
+      options: [
+        'Lina matabaka',
+        'Lina uhuru usio na mipaka',
+        'Halina mahusiano',
+        'Linafanya biashara'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q24',
+      text: 'Moja ya malalamiko ya wamilenia ilikuwa kwamba kanisa linaonekana kuwa nini kuhusiana na sayansi?',
+      options: [
+        'Mpinzani wa sayansi',
+        'Mtafiti mkuu wa sayansi',
+        'Chuo cha sayansi',
+        'Linafundisha sayansi pekee'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q25',
+      text: 'Uzoefu wa vijana kuhusu mahusiano ya kijinsia ulielezwa mara nyingi kuwa wa namna gani?',
+      options: [
+        'Wa kina sana',
+        'Wa kurahisisha au kuhukumu',
+        'Usio na umuhimu',
+        'Wa kisiasa'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q26',
+      text: 'Kanisa linapaswa kuwapa vijana nafasi ya kuhoji bila hofu ya nini?',
+      options: [
+        'Kufanikiwa',
+        'Kuhukumiwa au kukataliwa',
+        'Kusoma',
+        'Kuongoza'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q27',
+      text: 'Huduma ya vijana inapaswa kuzingatia mielekeo gani inayomwathiri kijana?',
+      options: [
+        'Ya kitamaduni na kijamii',
+        'Ya michezo pekee',
+        'Ya kifedha pekee',
+        'Ya kisiasa pekee'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q28',
+      text: 'Njia ya huduma ya vijana inapaswa kuwa ya aina gani?',
+      options: [
+        'Njia moja pekee',
+        'Bila kubadilika',
+        'Inayochunguza njia mbalimbali zinazofaa mahitaji ya vijana',
+        'Inayowatenga vijana'
+      ],
+      correctIndex: 2,
+    },
+    {
+      id: 'semina3-q29',
+      text: 'Moja ya kanuni za huduma iliyounganika ni kutoa nafasi kwa ajili ya nini?',
+      options: [
+        'Mahusiano yenye maana',
+        'Ushindani wa madaraka',
+        'Kutengwa',
+        'Mikutano ya siri'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q30',
+      text: 'Kwa nini utambuzi wa kitamaduni ni muhimu katika huduma ya vijana?',
+      options: [
+        'Kwa sababu utamaduni hauathiri vijana',
+        'Kwa sababu viongozi wanapaswa kuelewa mazingira yanayowazunguka vijana',
+        'Kwa sababu vijana hawahitaji kanisa',
+        'Kwa sababu utamaduni ni muhimu kuliko Biblia'
+      ],
+      correctIndex: 1,
+    },
+    {
+      id: 'semina3-q31',
+      text: 'Ni jambo gani linapaswa kupewa nafasi katika huduma ili vijana wajisikie wameunganishwa?',
+      options: [
+        'Mahusiano na Yesu',
+        'Mashindano ya kijamii',
+        'Umaarufu',
+        'Mali'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q32',
+      text: 'Ufunguo wa kwanza uliotajwa katika utafiti mwingine ni nini?',
+      options: [
+        'Mahusiano ya kufungamanisha',
+        'Fedha nyingi',
+        'Teknolojia pekee',
+        'Mashindano'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q33',
+      text: 'Ni jambo gani lilitajwa kama muhimu katika kuwafanya vijana wajisikie salama na kukubalika?',
+      options: [
+        'Msamaha na kukubaliwa',
+        'Adhabu',
+        'Kutengwa',
+        'Kulazimishwa'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q34',
+      text: 'Jukwaa la kubadilishana mawazo lina umuhimu gani?',
+      options: [
+        'Linawapa vijana nafasi ya kushiriki mawazo',
+        'Linawazuia vijana kuuliza',
+        'Linawafanya vijana wajitenge',
+        'Linahusiana na fedha pekee'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q35',
+      text: 'Lengo la kuandaa mazingira salama kwa vijana ni kuwasaidia kufanya nini?',
+      options: [
+        'Kufikiri na kukua katika uhusiano na Kristo',
+        'Kukataa mafundisho yote',
+        'Kujitenga na kanisa',
+        'Kuwa viongozi bila mafunzo'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q36',
+      text: 'Huduma ya vijana inapaswa kuwa kipaumbele katika nini?',
+      options: [
+        'Mipango mikakati ya kanisa',
+        'Biashara za kanisa',
+        'Mashindano ya vijana',
+        'Burudani pekee'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q37',
+      text: 'Ni kwa nini viongozi wanapaswa kuelewa kizazi cha vijana wanachokiongoza?',
+      options: [
+        'Ili waweze kutumia njia zinazofaa mahitaji na mazingira yao',
+        'Ili wawazuie kutumia teknolojia',
+        'Ili wawatenge na watu wazima',
+        'Ili wawape majukumu yote ya kanisa'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q38',
+      text: 'Huduma ya vijana inapaswa kuwasaidia vijana kuunganisha imani yao kwa Kristo na nini?',
+      options: [
+        'Uhalisia wanaouishi kila siku',
+        'Biashara zao',
+        'Umaarufu wao',
+        'Mashindano yao'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q39',
+      text: 'Ni mtazamo gani wa kibiblia viongozi wanapaswa kuwasaidia vijana kuuelewa?',
+      options: [
+        'Mtazamo chanya, wazi na wenye kuvutia',
+        'Mtazamo wa kulazimisha',
+        'Mtazamo wa kuwahukumu',
+        'Mtazamo wa kutenga'
+      ],
+      correctIndex: 0,
+    },
+    {
+      id: 'semina3-q40',
+      text: 'Ujumbe mkuu wa Semina 3 kuhusu huduma ya vijana ni upi?',
+      options: [
+        'Kuwatenga vijana ili wajifunze wenyewe',
+        'Kuelewa mahitaji ya vijana na kujenga huduma inayowashirikisha, kuwaunganisha na kuwasaidia kukua katika Kristo',
+        'Kuwafanya vijana wategemee viongozi katika kila jambo',
+        'Kuzingatia teknolojia pekee katika huduma'
+      ],
+      correctIndex: 1,
+    },
+  ],
 };
