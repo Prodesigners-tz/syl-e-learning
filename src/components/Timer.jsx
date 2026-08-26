@@ -1,17 +1,27 @@
 import { useEffect, useRef, useState } from 'react'
-import { QUESTION_TIME_SECONDS } from '../utils/quizLogic'
+import {
+  QUESTION_TIME_SECONDS,
+  LONG_QUESTION_TIME_SECONDS,
+  LONG_QUESTION_THRESHOLD,
+} from '../utils/quizLogic'
 
-export default function Timer({ resetKey, onExpire }) {
+// Quiz timer finalized
+export default function Timer({ resetKey, question, onExpire }) {
+  const questionTime =
+    question?.text?.length >= LONG_QUESTION_THRESHOLD
+      ? LONG_QUESTION_TIME_SECONDS
+      : QUESTION_TIME_SECONDS
+
   const [secondsLeft, setSecondsLeft] = useState(
-    QUESTION_TIME_SECONDS
+    questionTime
   )
 
   const expiredRef = useRef(false)
 
   useEffect(() => {
-    setSecondsLeft(QUESTION_TIME_SECONDS)
+    setSecondsLeft(questionTime)
     expiredRef.current = false
-  }, [resetKey])
+  }, [resetKey, questionTime])
 
   useEffect(() => {
     if (secondsLeft <= 0) {
