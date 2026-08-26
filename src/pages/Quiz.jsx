@@ -27,7 +27,7 @@ import Timer from '../components/Timer'
 
 export default function Quiz() {
   const { moduleId } = useParams()
-  const { user } = useAuth()
+  const { user, logout } = useAuth()
   const navigate = useNavigate()
 
   const module = getModuleById(moduleId)
@@ -58,7 +58,41 @@ export default function Quiz() {
         ? progressSnap.data()
         : null
 
+      let refreshData = null
+
+      try {
+        const savedRefresh = localStorage.getItem(
+          "quiz-refresh-pending"
+        )
+
+        if (savedRefresh) {
+          refreshData = JSON.parse(savedRefresh)
+          localStorage.removeItem("quiz-refresh-pending")
+        }
+      } catch {
+        refreshData = null
+      }
+
+      const isRefresh =
+        refreshData?.moduleId === moduleId &&
+        refreshData?.questionId
+
       setProgress(progressData)
+
+      const wasInterrupted =
+        progressData?.quizInterrupted === true || isRefresh
+
+      const interruptedIndex = isRefresh
+        ? refreshData.currentIndex
+        : progressData?.interruptedQuestionIndex ?? null
+
+      const interruptedQuestionId = isRefresh
+        ? refreshData.questionId
+        : progressData?.interruptedQuestionId ?? null
+
+      if (isRefresh && refreshData?.answers) {
+        setAnswers(refreshData.answers)
+      }
 
       const attemptCheck = canAttempt(progressData)
 
@@ -94,13 +128,70 @@ export default function Quiz() {
 
       const excludeIds = progressData?.lastQuestionIds || []
 
-      const picked = pickRandomQuestions(
-        bank,
-        QUESTIONS_PER_ATTEMPT,
-        excludeIds
-      )
+      if (wasInterrupted && interruptedQuestionId) {
+        excludeIds.push(interruptedQuestionId)
+      }
+
+      let picked
+
+      if (
+        wasInterrupted &&
+        Array.isArray(progressData?.quizQuestionIds) &&
+        progressData.quizQuestionIds.length > 0
+      ) {
+        const savedQuestions = progressData.quizQuestionIds
+          .map((id) => bank.find((q) => q.id === id))
+          .filter(Boolean)
+
+        picked = savedQuestions
+      } else {
+        picked = pickRandomQuestions(
+          bank,
+          QUESTIONS_PER_ATTEMPT,
+          excludeIds
+        )
+      }
 
       setQuestions(picked)
+
+      if (wasInterrupted && interruptedIndex !== null) {
+        setCurrentIndex(
+          Math.min(
+            interruptedIndex + 1,
+            Math.max(picked.length - 1, 0)
+          )
+        )
+      }
+
+      if (isRefresh) {
+        await setDoc(
+          progressRef,
+          {
+            quizInterrupted: true,
+            interruptedQuestionIndex: interruptedIndex,
+            interruptedQuestionId: interruptedQuestionId,
+            quizQuestionIds:
+              refreshData?.quizQuestionIds ||
+              progressData?.quizQuestionIds ||
+              [],
+            penalty: true,
+            interruptedAnswer: null,
+            lastAttemptAt: serverTimestamp(),
+          },
+          { merge: true }
+        )
+      } else if (wasInterrupted) {
+        await setDoc(
+          progressRef,
+          {
+            quizInterrupted: false,
+            interruptedQuestionIndex: null,
+            interruptedQuestionId: null,
+          },
+          { merge: true }
+        )
+      }
+
       setPhase('running')
     }
 
@@ -110,6 +201,105 @@ export default function Quiz() {
   function recordAnswer(optionIndex) {
     setSelected(optionIndex)
   }
+
+  // Quiz exit penalty finalized
+  async function handleQuizExit() {
+    const q = questions[currentIndex]
+
+    if (!q) {
+      await logout()
+      navigate("/login")
+      return
+    }
+
+    const progressRef = doc(
+      db,
+      "users",
+      user.uid,
+      "progress",
+      moduleId
+    )
+
+    await setDoc(
+      progressRef,
+      {
+        quizInterrupted: true,
+        interruptedQuestionIndex: currentIndex,
+        interruptedQuestionId: q.id,
+        quizQuestionIds: questions.map((question) => question.id),
+        penalty: true,
+        interruptedAnswer: null,
+        lastAttemptAt: serverTimestamp(),
+      },
+      { merge: true }
+    )
+
+    await logout()
+    navigate("/login")
+  }
+
+  useEffect(() => {
+    function handleBrowserBack() {
+      window.history.pushState(null, '', window.location.href)
+    }
+
+    window.history.pushState(null, '', window.location.href)
+    window.addEventListener('popstate', handleBrowserBack)
+
+    return () => {
+      window.removeEventListener('popstate', handleBrowserBack)
+    }
+  }, [])
+
+  useEffect(() => {
+    function onQuizExit() {
+      handleQuizExit()
+    }
+
+    window.addEventListener('quiz-exit', onQuizExit)
+
+    return () => {
+      window.removeEventListener('quiz-exit', onQuizExit)
+    }
+  }, [questions, currentIndex])
+
+  useEffect(() => {
+    if (phase !== "running" || !questions[currentIndex]) return
+
+    localStorage.setItem(
+      "quiz-interruption",
+      JSON.stringify({
+        moduleId,
+        currentIndex,
+        questionId: questions[currentIndex].id,
+        quizQuestionIds: questions.map((q) => q.id),
+      })
+    )
+  }, [phase, moduleId, currentIndex, questions])
+
+  // Quiz refresh resume finalized
+  useEffect(() => {
+    if (phase !== "running") return
+
+    function markQuizRefresh() {
+      localStorage.setItem(
+        "quiz-refresh-pending",
+        JSON.stringify({
+          moduleId,
+          currentIndex,
+          questionId: questions[currentIndex]?.id,
+          quizQuestionIds: questions.map((q) => q.id),
+          answers,
+        })
+      )
+    }
+
+    window.addEventListener("beforeunload", markQuizRefresh)
+
+    return () => {
+      window.removeEventListener("beforeunload", markQuizRefresh)
+    }
+  }, [phase, moduleId, currentIndex, questions])
 
   function goNext() {
     const q = questions[currentIndex]
@@ -202,7 +392,7 @@ export default function Quiz() {
           <h2>Bado huwezi kufanya mtihani huu</h2>
 
           <p style={{ color: 'var(--color-muted)' }}>
-            Ulifeli mara mbili mfululizo.
+            Umefeli mtihani huu.
             Tafadhali subiri hadi{' '}
             <strong>
               {waitUntil?.toLocaleString('sw-TZ')}
@@ -274,16 +464,6 @@ export default function Quiz() {
               Rudi kwenye notes
             </Link>
 
-            {!result.passed && (
-              <Link
-                to={`/quiz/${moduleId}`}
-                onClick={() => window.location.reload()}
-                className="btn btn-primary"
-              >
-                Jaribu Tena
-              </Link>
-            )}
-
             {result.passed && nextModule && (
               <Link
                 to={`/module/${nextModule.id}`}
@@ -318,6 +498,7 @@ export default function Quiz() {
 
       <Timer
         resetKey={q.id}
+        question={q}
         onExpire={handleExpire}
       />
 
