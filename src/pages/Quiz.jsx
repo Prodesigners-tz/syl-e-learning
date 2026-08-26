@@ -417,71 +417,76 @@ export default function Quiz() {
       : null
 
     return (
-      <div className="quiz-wrap">
-        <div className="card result-hero">
-          <div
-            className={`result-score ${
-              result.passed ? 'pass' : 'fail'
-            }`}
-          >
+      <div className={`quiz-result-screen ${result.passed ? 'quiz-result-pass' : 'quiz-result-fail'}`}>
+        {result.passed && (
+          <div className="celebration-field" aria-hidden="true">
+            {['🌸','🌺','🌷','💮','🌼','🌸','🌹','🌺','🌷','🌼','✨','🎉','🌸','🌺','✨','🌷','🌼','🎊','🌸','🌺','✨','🌷','🌹','🌼','🎉','🌸','🌺','🌷','✨','🌼'].map((item,index)=>(
+              <span key={index} className="celebration-particle" style={{'--particle-index':index}}>{item}</span>
+            ))}
+          </div>
+        )}
+
+        <div className="quiz-result-content">
+          <div className={`result-score ${result.passed ? 'pass' : 'fail'}`}>
             {result.percentage}%
           </div>
 
-          <h2>
-            {result.passed
-              ? 'Hongera, umefaulu!'
-              : 'Bado hujafikia alama ya kufaulu'}
-          </h2>
+          {result.passed ? (
+            <>
+              <p className="result-eyebrow">MATOKEO YA MTIHANI</p>
+              <h2 className="result-title">Hongera!</h2>
+              <p className="result-message">Umefaulu mtihani huu</p>
 
-          <p style={{ color: 'var(--color-muted)' }}>
-            Umejibu sahihi maswali {result.correct}{' '}
-            kati ya {result.total}.
-            Kiwango cha kufaulu ni 75%.
-          </p>
+              <div className="success-burst-button">
+                <span>UMEFAULU</span>
+              </div>
 
-          {!result.passed && (
-            <p
-              style={{
-                color: 'var(--color-muted)',
-                fontSize: '0.88rem',
-              }}
-            >
-              Unaweza kurudia mtihani huu
-              na maswali tofauti.
-              Ukifeli tena mfululizo,
-              utahitaji kusubiri siku 2.
-            </p>
+              <p className="result-detail">
+                Umejibu sahihi maswali {result.correct} kati ya {result.total}.
+                <br />
+                Kiwango cha kufaulu ni 75%.
+              </p>
+
+              <div className="result-next-actions">
+                {nextModule && (
+                  <Link to={`/module/${nextModule.id}`} className="btn btn-primary">
+                    Endelea: Semina {nextModule.order}
+                  </Link>
+                )}
+
+                {!nextModule && (
+                  <Link to="/certificate" className="btn btn-primary">
+                    Pata Cheti Chako
+                  </Link>
+                )}
+
+                <Link to={`/module/${moduleId}`} className="btn btn-secondary">
+                  Rudi kwenye notes
+                </Link>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="result-eyebrow">MATOKEO YA MTIHANI</p>
+
+              <div className="failure-button">POLE</div>
+
+              <p className="result-detail">
+                Umejibu sahihi maswali {result.correct} kati ya {result.total}.
+                <br />
+                Kiwango cha kufaulu ni 75%.
+              </p>
+
+              <div className="retry-message">
+                <span>Rudia kozi hii</span>
+                <strong>baada ya siku mbili.</strong>
+              </div>
+
+              <Link to={`/module/${moduleId}`} className="btn btn-secondary">
+                Rudi kwenye notes
+              </Link>
+            </>
           )}
-
-          <div
-            className="module-actions"
-            style={{ justifyContent: 'center' }}
-          >
-            <Link
-              to={`/module/${moduleId}`}
-              className="btn btn-secondary"
-            >
-              Rudi kwenye notes
-            </Link>
-
-            {result.passed && nextModule && (
-              <Link
-                to={`/module/${nextModule.id}`}
-                className="btn btn-primary"
-              >
-                Endelea: Semina {nextModule.order}
-              </Link>
-            )}
-
-            {result.passed && !nextModule && (
-              <Link
-                to="/certificate"
-                className="btn btn-primary"
-              >
-                Pata Cheti Chako
-              </Link>
-            )}
-          </div>
         </div>
       </div>
     )
