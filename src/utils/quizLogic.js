@@ -1,12 +1,14 @@
 // Msingi wa mantiki ya quiz: uchaguzi wa maswali bila mpangilio,
-// muda wa sekunde 15 kwa kila swali, alama ya kufaulu 75%, na
-// kanuni ya kusubiri siku 2 baada ya kufeli mara mbili mfululizo.
+// muda wa sekunde 15 kwa kila swali, alama ya kufaulu 75%,
+// na kusubiri siku 2 baada ya kila kufeli.
 
 export const PASS_MARK = 75
 export const QUESTION_TIME_SECONDS = 15
+export const LONG_QUESTION_TIME_SECONDS = 25
+export const LONG_QUESTION_THRESHOLD = 160
 export const QUESTIONS_PER_ATTEMPT = 15
+// Quiz cooldown finalized
 export const COOLDOWN_HOURS = 48
-export const CONSECUTIVE_FAILS_BEFORE_COOLDOWN = 2
 
 export function pickRandomQuestions(
   bank,
@@ -62,7 +64,6 @@ export function canAttempt(progress) {
 
 export function nextProgressState(progress, attemptResult) {
   const now = new Date()
-  const failStreak = progress?.failStreak || 0
 
   if (attemptResult.passed) {
     return {
@@ -71,15 +72,10 @@ export function nextProgressState(progress, attemptResult) {
         progress?.bestScore || 0,
         attemptResult.percentage
       ),
-      failStreak: 0,
       cooldownUntil: null,
       lastAttemptAt: now,
     }
   }
-
-  const newFailStreak = failStreak + 1
-  const shouldCooldown =
-    newFailStreak >= CONSECUTIVE_FAILS_BEFORE_COOLDOWN
 
   return {
     status: 'failed',
@@ -87,12 +83,9 @@ export function nextProgressState(progress, attemptResult) {
       progress?.bestScore || 0,
       attemptResult.percentage
     ),
-    failStreak: shouldCooldown ? 0 : newFailStreak,
-    cooldownUntil: shouldCooldown
-      ? new Date(
-          now.getTime() + COOLDOWN_HOURS * 60 * 60 * 1000
-        )
-      : null,
+    cooldownUntil: new Date(
+      now.getTime() + COOLDOWN_HOURS * 60 * 60 * 1000
+    ),
     lastAttemptAt: now,
   }
 }
