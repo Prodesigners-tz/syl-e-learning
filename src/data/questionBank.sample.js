@@ -306,6 +306,20 @@ export const QUESTION_BANK_SAMPLE = {
   semina2: [
     {
       id: 'semina2-q1',
+      text: 'Semina ya 2 inasisitiza nini kuhusu akili ya vijana wadogo?',
+      options: [
+        'Imekamilika kabisa kufikia miaka 12',
+        'Bado haijakamilika, hasa sehemu inayohusika na uamuzi',
+        'Haihusiani na maamuzi',
+        'Ni sawa na ya watu wazima',
+      ],
+      correctIndex: 1,
+    },
+  ],
+
+  semina2: [
+    {
+      id: 'semina2-q1',
       text: 'Kulingana na maelezo ya Abigail Baird, ukuaji wa ubongo wa mwanadamu huendelea hadi lini?',
       options: [
         'Hadi miaka 10',
@@ -389,17 +403,6 @@ export const QUESTION_BANK_SAMPLE = {
         'Kwa sababu aliwafahamu na kuwakaribia katika hali yao',
         'Kwa sababu aliwaahidi nafasi za uongozi',
         'Kwa sababu aliwaficha Mafarisayo'
-      ],
-      correctIndex: 1,
-    },
-    {
-      id: 'semina2-q9',
-      text: 'Semina ya 2 inasisitiza nini kuhusu akili ya vijana wadogo?',
-      options: [
-        'Imekamilika kabisa kufikia miaka 12',
-        'Bado haijakamilika, hasa sehemu inayohusika na uamuzi',
-        'Haihusiani na maamuzi',
-        'Ni sawa na ya watu wazima',
       ],
       correctIndex: 1,
     },
@@ -1848,45 +1851,447 @@ export const QUESTION_BANK_SAMPLE = {
     { id: 'semina9-q39', text: 'Ni ipi MOST correct kuhusu kauli “Vijana wataimaliza kazi” katika muktadha wa semina?', options: ['Inamaanisha vijana hawahitaji viongozi au watu wazima katika utume', 'Inasisitiza wajibu na nafasi kubwa ya vijana katika utume, huku viongozi wakiwa na jukumu la kuwaandaa, kuwaongoza na kuwawezesha', 'Inamaanisha vijana pekee ndio wanaoweza kufanya uinjilisti', 'Inamaanisha kazi ya kanisa inapaswa kuhamishiwa kabisa kwa vijana'], correctIndex: 1 },
     { id: 'semina9-q40', text: 'Ni mpango upi unaonyesha kwa kiwango cha juu zaidi falsafa nzima ya Semina ya 9?', options: ['Kuchagua mahubiri ya hadhara kama njia pekee, kuwapa vijana majukumu sawa na kupima mafanikio kwa idadi ya waliobatizwa', 'Kugundua karama za vijana, kuchunguza mahitaji ya jamii, kuwashirikisha katika kuchagua mbinu, kuwahudumia watu kwa upendo na kutathmini huduma ili kuboresha utume', 'Kuwapa vijana shughuli nyingi za kanisa ili wajifunze kuwajibika bila kuhusisha mahitaji ya jamii', 'Kuanza kila mradi kwa kutafuta watu wa kuhudhuria kanisani kisha kuamua huduma gani itatolewa'], correctIndex: 1 },
 
-    { id: 'semina10-q1', text: 'Kwa nini viongozi wa vijana hawawezi kupuuza mitandao ya kijamii katika huduma yao?', options: ['Kwa sababu vijana wote hutumia mitandao ya kijamii muda wote', 'Kwa sababu mitandao ya kijamii ni lugha muhimu ya mawasiliano kwa vijana wengi na ina fursa pamoja na hatari', 'Kwa sababu kanisa linapaswa kutumia kila teknolojia mpya', 'Kwa sababu mitandao ya kijamii ni bora kuliko Biblia'], correctIndex: 1 },
-    { id: 'semina10-q2', text: 'Kwa mujibu wa semina, intaneti yenyewe inapaswa kueleweka kama nini?', options: ['Chanzo cha uovu pekee', 'Jibu la matatizo yote ya dunia', 'Zana inayoweza kutumika kwa mema au mabaya kulingana na uchaguzi wa mtumiaji', 'Mahali pa burudani pekee'], correctIndex: 2 },
-    { id: 'semina10-q3', text: 'Ni jukumu gani muhimu la kiongozi kuhusu matumizi ya teknolojia?', options: ['Kuwakataza vijana kutumia teknolojia kabisa', 'Kuwa mfano wa matumizi mazuri ya teknolojia na mitandao ya kijamii', 'Kuwaachia vijana waamue kila kitu wenyewe', 'Kuwaruhusu vijana kutumia intaneti bila mipaka'], correctIndex: 1 },
-    { id: 'semina10-q4', text: 'Kwa nini vijana wanapaswa kufundishwa kuchunguza vyanzo vya taarifa mtandaoni?', options: ['Kwa sababu kila tovuti ina taarifa za uongo', 'Kwa sababu yeyote anaweza kuwa na tovuti na si kila taarifa ni ya kutumainika', 'Kwa sababu intaneti haitumiki kwa elimu', 'Kwa sababu vijana hawapaswi kusoma mtandaoni'], correctIndex: 1 },
-    { id: 'semina10-q5', text: 'Ni swali gani linaweza kumsaidia kijana kutathmini burudani anayopata mtandaoni?', options: ['Je, watu wengi wanaipenda?', 'Je, ni maarufu kwenye mitandao?', 'Je, Yesu angefurahia kuangalia au kusikiliza pamoja nami?', 'Je, ni bure?'], correctIndex: 2 },
-    { id: 'semina10-q6', text: 'Ni kanuni ipi ya msingi ya usalama mtandaoni iliyosisitizwa katika semina?', options: ['Kutoa taarifa zako zote ili watu wakuamini', 'Kuwa mwangalifu kuhusu taarifa binafsi unazotoa mtandaoni', 'Kukutana na kila mtu unayefahamiana naye mtandaoni', 'Kutumia jina lako kamili kila mahali'], correctIndex: 1 },
-    { id: 'semina10-q7', text: 'Kwa nini kijana anashauriwa kutokutana ana kwa ana na mtu aliyemfahamu mtandaoni bila tahadhari kubwa?', options: ['Kwa sababu marafiki wa mtandaoni hawapo', 'Kwa sababu mtu mtandaoni anaweza asiwe yule anayedai kuwa', 'Kwa sababu mawasiliano ya mtandaoni ni haramu', 'Kwa sababu intaneti hairuhusu urafiki'], correctIndex: 1 },
-    { id: 'semina10-q8', text: 'Kulingana na Mt. 7:12, kijana anapaswa kuwatendeaje wengine mtandaoni?', options: ['Kwa namna yoyote anayopenda', 'Kama vile angependa kutendewa', 'Kwa ukali ili wajifunze', 'Kwa kujibu kila tusi kwa tusi'], correctIndex: 1 },
-    { id: 'semina10-q9', text: 'Kwa nini semina inashauri kijana kutukana, kukejeli au kumnyanyasa mtu mtandaoni?', options: ['Kwa sababu tabia hiyo ni mbaya na inapingana na kanuni za Kikristo', 'Kwa sababu mitandao ni ya watu wazima pekee', 'Kwa sababu maoni tofauti hayaruhusiwi', 'Kwa sababu kila mazungumzo mtandaoni ni ya siri'], correctIndex: 0 },
-    { id: 'semina10-q10', text: 'Ni kanuni gani ya Mithali 13:20 inayohusiana na marafiki wa mtandaoni?', options: ['Marafiki wote wana athari sawa', 'Enenda pamoja na wenye hekima nawe utakuwa na hekima', 'Usiwe na marafiki kabisa', 'Marafiki wa mtandaoni hawawezi kuathiri tabia'], correctIndex: 1 },
-    { id: 'semina10-q11', text: 'Kijana anapoona anaanza kutumia intaneti kupita kiasi, anashauriwa kuwajibika kwa nani?', options: ['Mtu mzima anayemjali kama mzazi, mwalimu au kiongozi wa vijana', 'Rafiki asiye na uzoefu', 'Mtu yeyote asiyejulikana mtandaoni', 'Hakuna mtu'], correctIndex: 0 },
-    { id: 'semina10-q12', text: 'Ni ipi inaweza kuwa ishara ya uraibu wa intaneti?', options: ['Kushiriki shughuli za vijana kwa furaha', 'Kupoteza hamu ya shughuli ambazo kijana alikuwa akizifurahia', 'Kutumia intaneti kwa ajili ya shule', 'Kuwasiliana na familia'], correctIndex: 1 },
-    { id: 'semina10-q13', text: 'Ni hali ipi nyingine inaweza kuonyesha uraibu wa intaneti?', options: ['Kujisikia kufadhaika au wasiwasi wakati huwezi kutumia intaneti', 'Kusoma Biblia kila siku', 'Kushiriki ibada', 'Kufanya mazoezi'], correctIndex: 0 },
-    { id: 'semina10-q14', text: 'Utumiaji wa intaneti kwa siri unaweza kuashiria nini?', options: ['Ujuzi mkubwa wa teknolojia', 'Ishara ya hatari ya utegemezi au matumizi yasiyofaa', 'Ukomavu wa kiroho', 'Ufanisi wa masomo'], correctIndex: 1 },
-    { id: 'semina10-q15', text: 'Kulingana na Flp. 4:8, Mkristo anapaswa kutafakari mambo ya aina gani?', options: ['Mambo yote yanayovutia bila kuchagua', 'Mambo ya kweli, ya staha, ya haki, safi, yenye kupendeza na yenye sifa njema', 'Mambo yenye utata pekee', 'Mambo maarufu zaidi mtandaoni'], correctIndex: 1 },
-    { id: 'semina10-q16', text: 'Kwa nini ponografia mtandaoni haifai kwa Mkristo kulingana na semina?', options: ['Kwa sababu ni teknolojia mpya', 'Kwa sababu ponografia ni ponografia bila kujali imepatikana wapi', 'Kwa sababu ni vigumu kuipata', 'Kwa sababu ni ghali'], correctIndex: 1 },
-    { id: 'semina10-q17', text: 'Ni mambo gani mengine ambayo semina inatahadharisha vijana kuyaepuka mtandaoni?', options: ['Elimu na utafiti', 'Vita, chuki, ubaguzi na mambo ya umizimu', 'Mawasiliano na familia', 'Masomo ya Biblia'], correctIndex: 1 },
-    { id: 'semina10-q18', text: 'Kijana anapaswa kufanya nini akifungua kwa bahati mbaya ukurasa wenye maudhui mabaya?', options: ['Kubaki hapo kwa udadisi', 'Kuutuma kwa marafiki', 'Kuondoka katika ukurasa huo mara moja', 'Kutoa maoni'], correctIndex: 2 },
-    { id: 'semina10-q19', text: 'Kwa nini hata tovuti nzuri zinaweza kuathiri vibaya maisha ya kiroho?', options: ['Kwa sababu tovuti zote ni mbaya', 'Kwa sababu matumizi ya mtandao yanaweza kugeuka uraibu na kuchukua muda wa familia, shule, usingizi na Mungu', 'Kwa sababu tovuti za Kikristo haziruhusiwi', 'Kwa sababu vijana hawapaswi kutumia kompyuta'], correctIndex: 1 },
-    { id: 'semina10-q20', text: 'Ni hatua gani inaweza kusaidia kijana ambaye matumizi ya mtandao yanaingilia vipaumbele vyake?', options: ['Kuongeza muda wa mtandaoni', 'Kuchukua mapumziko ya intaneti au mitandao ya kijamii', 'Kuficha matumizi yake', 'Kuacha shughuli zote za familia'], correctIndex: 1 },
-    { id: 'semina10-q21', text: 'Warumi 12:2 inahimiza nini katika mazingira ya kidijitali?', options: ['Kufuata namna ya dunia', 'Kufanywa upya nia ili kutambua mapenzi ya Mungu', 'Kukataa kila teknolojia', 'Kufuata kile kinachopendwa na wengi'], correctIndex: 1 },
-    { id: 'semina10-q22', text: 'Kwa mujibu wa 1 Kor. 6:19-20, kwa nini matumizi ya kidijitali yanapaswa kufikiriwa kwa uangalifu?', options: ['Kwa sababu simu ni ghali', 'Kwa sababu mwili ni hekalu la Roho Mtakatifu na ni mali ya Mungu', 'Kwa sababu intaneti ni haramu', 'Kwa sababu vijana hawana uwezo wa kuamua'], correctIndex: 1 },
-    { id: 'semina10-q23', text: 'Ni tofauti gani ya msingi kati ya intaneti na mitandao ya kijamii?', options: ['Intaneti ni programu moja na mitandao ni kompyuta', 'Intaneti ni kama barabara kuu, na mitandao ya kijamii ni njia mbalimbali zinazotumiwa ndani yake', 'Hakuna tofauti kabisa', 'Mitandao ya kijamii haitegemei intaneti'], correctIndex: 1 },
-    { id: 'semina10-q24', text: 'Ni matumizi gani ya intaneti yanayoweza kuimarisha mahusiano yaliyopo?', options: ['Kuwasiliana na familia na marafiki walio mbali', 'Kuwaficha marafiki', 'Kuepuka mawasiliano ya ana kwa ana', 'Kutoa taarifa binafsi kwa wageni'], correctIndex: 0 },
-    { id: 'semina10-q25', text: 'Kwa nini kupata marafiki wapya mtandaoni kunahitaji tahadhari zaidi?', options: ['Kwa sababu kila mtu mtandaoni ni mwovu', 'Kwa sababu mtu anaweza kujifanya kuwa mtu mwingine na taarifa zake si rahisi kuthibitisha', 'Kwa sababu urafiki wote ni mbaya', 'Kwa sababu mitandao ya kijamii hairuhusu urafiki'], correctIndex: 1 },
-    { id: 'semina10-q26', text: 'Kwa mujibu wa ushauri wa Dr. Tim Elmore, uwiano wa muda wa skrini na muda wa mambo halisi unaweza kuwa upi?', options: ['Saa moja ya skrini kwa siku nzima ya upweke', 'Kwa kila saa ya skrini, kutumia muda kama huo ana kwa ana na watu', 'Kutotumia muda na watu kabisa', 'Kutumia skrini muda wote'], correctIndex: 1 },
-    { id: 'semina10-q27', text: 'Kwa nini mtu anapaswa kuweka simu kimya wakati wa mazungumzo ya ana kwa ana?', options: ['Ili simu isitumiwe tena', 'Ili kuonyesha kuwa mtu unayezungumza naye ndiye kipaumbele', 'Ili kuokoa betri pekee', 'Ili kuzuia ujumbe wote'], correctIndex: 1 },
-    { id: 'semina10-q28', text: '“Mfungo wa teknolojia” unamaanisha nini katika semina?', options: ['Kufuta teknolojia milele', 'Kuweka kando simu, tablet au kompyuta kwa muda ili kurejesha uwiano', 'Kununua simu mpya', 'Kutumia intaneti kwa siri'], correctIndex: 1 },
-    { id: 'semina10-q29', text: 'Kwa nini wazazi wanahimizwa kuzungumza na watoto kuhusu usalama wa mtandaoni mapema?', options: ['Ili kuwazuia watoto kutumia elimu', 'Ili kujenga uwajibikaji na kuzuia madhara kabla matatizo hayajatokea', 'Ili kuwaficha watoto intaneti', 'Ili wazazi watumie simu zao zaidi'], correctIndex: 1 },
-    { id: 'semina10-q30', text: 'Ni kwa nini vijana wanapaswa kufundishwa kwamba kinachowekwa mtandaoni kinaweza kubaki mtandaoni?', options: ['Kwa sababu kila kitu mtandaoni kinafutika baada ya saa moja', 'Kwa sababu taarifa au picha inaweza kuendelea kuwepo au kusambazwa hata baada ya kufutwa', 'Kwa sababu hakuna mtu anayeona mtandaoni', 'Kwa sababu mitandao yote ni ya siri'], correctIndex: 1 },
-    { id: 'semina10-q31', text: 'Ni somo gani kuu kuhusu chaguzi za mtandaoni?', options: ['Chaguzi hazina matokeo', 'Kila chaguo linaweza kuwa na matokeo, hivyo mtu anapaswa kufikiri kabla ya kutenda', 'Chaguo la mtandaoni halina umuhimu', 'Mtu mwingine ndiye anayewajibika kwa kila chaguo'], correctIndex: 1 },
-    { id: 'semina10-q32', text: 'Kijana anapokea ujumbe wa kumdhalilisha mtu mwingine. Ni mwitikio upi unaolingana na semina?', options: ['Kuu-forward kwa marafiki', 'Kumshirikisha zaidi mtu huyo kwa kumtukana', 'Kutokushiriki katika unyanyasaji na kuchagua kutenda kwa heshima', 'Kumkejeli zaidi'], correctIndex: 2 },
-    { id: 'semina10-q33', text: 'Ni njia ipi inaweza kuwa matumizi mazuri ya mitandao ya kijamii katika huduma ya vijana?', options: ['Kusambaza ujumbe wa matumaini, Biblia na ushuhuda kwa njia yenye heshima', 'Kushambulia watu wasioamini', 'Kusambaza taarifa zisizothibitishwa', 'Kuwafichua watu hadharani'], correctIndex: 0 },
-    { id: 'semina10-q34', text: 'Kijana anatumia muda mwingi mtandaoni na ameacha familia, marafiki, shule na ibada. Tatizo kuu ni lipi?', options: ['Ana ujuzi mwingi wa teknolojia', 'Ameacha kuwa na uwiano wa maisha na matumizi ya teknolojia yanaingilia vipaumbele muhimu', 'Anatumia intaneti kwa elimu', 'Ana marafiki wengi'], correctIndex: 1 },
-    { id: 'semina10-q35', text: 'Kiongozi anataka kuwafundisha vijana kuhusu teknolojia. Njia ipi inaendana zaidi na semina?', options: ['Kuwakataza teknolojia yote', 'Kuwafundisha fursa na hatari zake pamoja na kuwasaidia kufanya uchaguzi wenye hekima', 'Kuwaacha bila mwongozo', 'Kuwaambia teknolojia yote ni mbaya'], correctIndex: 1 },
-    { id: 'semina10-q36', text: 'Ni kanuni ipi inaonyesha matumizi ya “njia ya Kristo” katika mazingira ya kidijitali?', options: ['Kushambulia watu mtandaoni', 'Kuwaonyesha watu huruma, kujenga mahusiano na kutumia mawasiliano kuonyesha upendo wa Kristo', 'Kuwalazimisha watu kujiunga na kanisa', 'Kuepuka kabisa watu wasio wa kanisa'], correctIndex: 1 },
-    { id: 'semina10-q37', text: 'Kijana anahitaji msaada kwa sababu hawezi kudhibiti matumizi ya intaneti. Hatua ya busara ni ipi?', options: ['Kuficha tatizo', 'Kuomba msaada kutoka kwa mzazi, mlezi au mtu mzima anayemwamini', 'Kuongeza muda wa mtandaoni', 'Kujitenga na kila mtu'], correctIndex: 1 },
-    { id: 'semina10-q38', text: 'Ni kwa nini kiongozi anapaswa kuwasaidia vijana kuwa “mawakili” wa mitandao ya kijamii?', options: ['Ili watumie mitandao bila mipaka', 'Ili wajifunze kutumia fursa za kidijitali kwa mema huku wakitambua na kuepuka hatari zake', 'Ili waache kabisa maisha halisi', 'Ili wawe maarufu zaidi'], correctIndex: 1 },
-    { id: 'semina10-q39', text: 'Ni mpango upi unaonyesha matumizi yenye uwiano zaidi ya teknolojia kwa kijana Mkristo?', options: ['Kutumia simu muda wote kwa sababu ni muhimu', 'Kutumia teknolojia kwa elimu, mawasiliano na huduma huku akilinda muda wa Mungu, familia, shule, usingizi na mahusiano ya ana kwa ana', 'Kuepuka teknolojia kabisa', 'Kutumia mitandao pekee kwa burudani'], correctIndex: 1 },
-    { id: 'semina10-q40', text: 'Ni kauli ipi inaonyesha vizuri zaidi ujumbe mkuu wa Semina ya 10?', options: ['Teknolojia ni uovu na vijana wanapaswa kuikataa', 'Teknolojia haina hatari yoyote ikiwa ni ya kisasa', 'Intaneti, mitandao ya kijamii na simu vinaweza kuwa mbaraka au kikwazo; vijana wanahitaji mwongozo wa Kikristo, usalama, uwiano na matumizi yenye kusudi', 'Mitandao ya kijamii ndiyo njia pekee ya kueneza Injili'], correctIndex: 2 },
   ],
+  semina10: [
+  {
+    id: 'semina10-q1',
+    text: 'Kwa nini kiongozi wa vijana anapaswa kuichukulia mitandao ya kijamii kwa uzito katika huduma ya vijana?',
+    options: [
+      'Kwa sababu imechukua nafasi ya lugha za kawaida katika mawasiliano ya vijana wengi na hivyo haiwezi kupuuzwa katika huduma',
+      'Kwa sababu vijana wengi hutumia sehemu kubwa ya maisha yao ya kila siku katika mazingira ya kidijitali yenye fursa na hatari',
+      'Kwa sababu mitandao ya kijamii ndiyo njia kuu pekee ambayo vijana wanaweza kutumia kujenga urafiki na kujifunza',
+      'Kwa sababu teknolojia ya kisasa imekuwa sehemu ya maisha ya vijana na hivyo kanisa linapaswa kuitumia bila kuweka mipaka'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q2',
+    text: 'Ni mtazamo upi unaeleza vizuri zaidi jinsi Mkristo anavyopaswa kuiona intaneti kulingana na semina?',
+    options: [
+      'Ni mazingira yenye hatari ambayo Mkristo anapaswa kuyaepuka isipokuwa kwa mambo muhimu sana',
+      'Ni chombo cha mawasiliano ambacho manufaa yake hutegemea zaidi aina ya teknolojia inayotumiwa',
+      'Ni zana ambayo inaweza kutumiwa kwa mema au mabaya, hivyo uchaguzi wa mtumiaji una umuhimu mkubwa',
+      'Ni njia ya kisasa ambayo kanisa linapaswa kuitumia kwa sababu faida zake kwa vijana ni kubwa kuliko hasara zake'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q3',
+    text: 'Kwa mujibu wa semina, ni kwa nini nguvu ya teknolojia inahitaji kuambatana na jukumu kubwa la tahadhari?',
+    options: [
+      'Kwa sababu vifaa vya kidijitali vinaweza kumpa kijana uwezo wa kupata taarifa na mawasiliano kwa kasi bila kuhitaji msaada wa wengine',
+      'Kwa sababu uwezo mkubwa wa teknolojia unaweza kutumiwa kwa manufaa lakini pia unaweza kumweka kijana katika hatari kulingana na namna unavyotumiwa',
+      'Kwa sababu vijana wanaweza kutumia simu kufanya kazi nyingi kwa wakati mmoja na hivyo kupoteza muda wa masomo',
+      'Kwa sababu teknolojia hubadilika haraka kuliko uwezo wa wazazi na viongozi kuielewa'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q4',
+    text: 'Kiongozi anapomfundisha kijana kutathmini taarifa anazokutana nazo mtandaoni, ni kanuni ipi ya semina inayopaswa kupewa uzito zaidi?',
+    options: [
+      'Kila taarifa inayopatikana mtandaoni inapaswa kuchukuliwa kwa tahadhari kwa sababu taarifa nyingi ni za burudani',
+      'Taarifa inayotolewa na tovuti maarufu inaweza kutegemewa ikiwa imeandikwa kwa lugha inayoeleweka',
+      'Kwa kuwa yeyote anaweza kuwa na tovuti, taarifa muhimu inapaswa kulinganishwa na vyanzo vingine vya kuaminika',
+      'Taarifa za mtandaoni zinafaa kutumiwa zaidi kwa mambo ya shule kuliko mambo yanayohusu maisha ya kiroho'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q5',
+    text: 'Kijana anataka kutumia mtandao kwa burudani. Ni njia ipi ya kutathmini uchaguzi huo inayolingana zaidi na semina?',
+    options: [
+      'Kuangalia kama burudani hiyo inaruhusiwa na watu wengi wa rika lake',
+      'Kujiuliza kama burudani hiyo inamletea furaha bila kujali aina ya maudhui yaliyomo',
+      'Kujiuliza kama angeweza kuishiriki mbele ya marafiki na viongozi wake bila kuona aibu',
+      'Kujiuliza kama Yesu angefurahia kuangalia au kusikiliza jambo hilo pamoja naye'
+    ],
+    correctIndex: 3
+  },
+  {
+    id: 'semina10-q6',
+    text: 'Ni hatua ipi inalinda vizuri zaidi kanuni ya usalama wa kijana anayetumia mitandao ya kijamii?',
+    options: [
+      'Kutoa taarifa chache binafsi lakini kutumia jina halisi ili marafiki wapate kumtambua kwa urahisi',
+      'Kuepuka kutoa taarifa zinazoweza kumtambulisha kama anwani, shule au mji anaoshi kwa watu asiowafahamu',
+      'Kutoa taarifa binafsi baada ya kuhakikisha mtu huyo ana marafiki wengi katika mtandao huo',
+      'Kushirikisha taarifa za maisha yake kwa undani ili kujenga uaminifu na marafiki wapya'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q7',
+    text: 'Kwa nini semina inapendekeza urafiki unaoanzishwa mtandaoni usihamishwe moja kwa moja katika maisha halisi?',
+    options: [
+      'Kwa sababu urafiki wa mtandaoni mara nyingi hauna thamani sawa na urafiki wa ana kwa ana',
+      'Kwa sababu mtu anayewasiliana naye mtandaoni anaweza kutoa utambulisho ambao si rahisi kuthibitisha',
+      'Kwa sababu mawasiliano ya ana kwa ana yanaweza kuathiri matumizi ya muda wa kijana',
+      'Kwa sababu mitandao ya kijamii imeundwa kwa ajili ya mawasiliano ya kidijitali tu'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q8',
+    text: 'Kijana anataka kueleza marafiki wa mtandaoni kinachoendelea katika maisha yake bila kuvunja kanuni za usalama. Ni njia ipi inafaa zaidi?',
+    options: [
+      'Kueleza matukio ya maisha yake kwa ujumla bila kutoa maelezo yanayoweza kumtambulisha kwa urahisi',
+      'Kutoa jina la shule na mji anaoshi ili marafiki waweze kuelewa mazingira yake',
+      'Kutuma picha na taarifa kamili za maisha yake kwa wale anaowaamini zaidi mtandaoni',
+      'Kutoa namba yake ya simu ili mawasiliano yawe salama kuliko kutumia akaunti ya mtandao'
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 'semina10-q9',
+    text: 'Ni sababu ipi inayofanya kumtukana au kumkejeli mtu mtandaoni kuwa tatizo la Kikristo zaidi ya kuwa tatizo la mawasiliano tu?',
+    options: [
+      'Kwa sababu mitandao ya kijamii inahitaji mawasiliano yenye heshima ili isiharibu sifa ya mtumiaji',
+      'Kwa sababu tabia hiyo inapingana na kanuni ya kumtendea mwingine kama ambavyo mtu angependa kutendewa',
+      'Kwa sababu maoni ya mtandaoni yanaweza kuhifadhiwa na watu wengine kwa muda mrefu',
+      'Kwa sababu mtu anayekejeliwa anaweza kuamua kuacha kutumia mtandao'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q10',
+    text: 'Kijana anasema, “Ninaweza kufanya jambo hili mtandaoni kwa sababu hakuna anayeniona.” Ni kanuni ipi ya semina inayorekebisha zaidi mtazamo huo?',
+    options: [
+      'Matendo ya mtandaoni yanahitaji kuzingatia viwango vya Kikristo sawa na matendo mengine ya maisha',
+      'Matendo ya mtandaoni yanapaswa kuzingatia zaidi sheria za tovuti kuliko kanuni za dini',
+      'Mambo ya mtandaoni yanaweza kuwa ya faragha ikiwa hayamdhuru mtu moja kwa moja',
+      'Mtu anapaswa kuepuka tu vitendo vinavyoweza kuonekana na viongozi wa kanisa'
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 'semina10-q11',
+    text: 'Kwa kutumia kanuni ya Mithali 13:20, ni kwa nini uchaguzi wa marafiki wa mtandaoni unahitaji hekima?',
+    options: [
+      'Kwa sababu marafiki wa mtandaoni wanaweza kumsaidia kijana kujifunza teknolojia kwa haraka zaidi',
+      'Kwa sababu muda mwingi unaotumiwa na marafiki wa mtandaoni unaweza kupunguza muda wa familia',
+      'Kwa sababu watu ambao kijana hushirikiana nao wanaweza kuwa na ushawishi juu ya tabia na uchaguzi wake',
+      'Kwa sababu marafiki wa mtandaoni wanapaswa kuwa na imani na maslahi yanayofanana kabisa na yake'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q12',
+    text: 'Ni hali ipi inaonyesha zaidi kuwa kijana anahitaji kuwajibika kwa mtu mzima anayemjali?',
+    options: [
+      'Kijana anatumia intaneti kujifunza na bado anashiriki kikamilifu katika shughuli nyingine',
+      'Kijana anapendelea kutumia programu fulani kuliko nyingine lakini anaweza kuacha anapotakiwa',
+      'Kijana anaona ni vigumu kuweka uwiano wa matumizi ya mitandao na maeneo mengine ya maisha yake',
+      'Kijana anatumia mtandao kuwasiliana na familia yake iliyo mbali'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q13',
+    text: 'Ni mchanganyiko upi unaonyesha dalili zinazotajwa katika semina kuhusu uraibu wa mitandao ya kijamii?',
+    options: [
+      'Kupunguza matumizi ya intaneti, kuongeza muda wa familia na kushiriki zaidi shughuli za vijana',
+      'Kupoteza hamu ya shughuli zilizokuwa zikifurahisha, kujisikia wasiwasi bila intaneti na kujitenga na familia',
+      'Kutumia intaneti kwa masomo, kuwasiliana na marafiki na kutafuta taarifa kwa ajili ya miradi',
+      'Kuweka muda maalum wa kutumia simu na kuomba msaada pale matumizi yanapokuwa magumu kudhibiti'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q14',
+    text: 'Kwa nini matumizi ya intaneti kwa siri yanaweza kuwa ishara ya hatari ya uraibu?',
+    options: [
+      'Kwa sababu matumizi ya siri yanaweza kuonyesha kuwa mtu anafahamu kuwa matumizi yake yameanza kuvuka mipaka inayofaa',
+      'Kwa sababu matumizi ya intaneti yanapaswa kufanyika mbele ya watu wengine kila wakati',
+      'Kwa sababu kijana anayeficha matumizi yake hawezi kutumia intaneti kwa ajili ya elimu',
+      'Kwa sababu matumizi ya siri yanaonyesha kwamba kijana hana marafiki wa kutosha'
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 'semina10-q15',
+    text: 'Ni mabadiliko gani yanaonyesha vizuri zaidi kwamba matumizi ya intaneti yameanza kuathiri maisha ya kijana?',
+    options: [
+      'Kijana anatumia intaneti mara kwa mara lakini bado anatenga muda wa familia, shule, usingizi na Mungu',
+      'Kijana anatumia intaneti kwa shughuli nyingi tofauti na anajifunza programu mpya',
+      'Kijana anatumia muda mwingi mtandaoni kiasi kwamba anapuuza familia, shule, usingizi au muda na Mungu',
+      'Kijana anatumia mtandao kuwasiliana na watu ambao wako mbali naye'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q16',
+    text: 'Kwa mujibu wa Wafilipi 4:8 kama ulivyotumika katika semina, ni kigezo gani kinafaa katika kuchagua maudhui ya mtandaoni?',
+    options: [
+      'Maudhui yawe maarufu na yenye kuvutia watu wengi ili yawe na thamani ya kijamii',
+      'Maudhui yawe ya kweli, ya staha, ya haki, safi, yenye kupendeza na yenye sifa njema',
+      'Maudhui yawe ya kielimu hata kama yanapingana na kanuni za Kikristo',
+      'Maudhui yawe ya kisasa na yasiyohitaji muda mwingi kuyatazama'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q17',
+    text: 'Kwa nini semina inasisitiza kuwa ponografia haifai kwa Mkristo hata inapopatikana kupitia teknolojia ya kisasa?',
+    options: [
+      'Kwa sababu teknolojia ya kisasa imefanya maudhui hayo kufikika kwa urahisi zaidi kuliko zamani',
+      'Kwa sababu matumizi ya intaneti yanapaswa kuwa kwa ajili ya elimu na mawasiliano pekee',
+      'Kwa sababu asili ya maudhui hayo haibadiliki kuwa inayofaa kwa Mkristo kwa sababu tu yamepatikana mtandaoni',
+      'Kwa sababu tovuti zinazotoa maudhui hayo mara nyingi hazina vyanzo vinavyoaminika'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q18',
+    text: 'Kijana anafungua kwa bahati mbaya ukurasa wenye maudhui yasiyofaa. Ni hatua ipi inayolingana zaidi na ushauri wa semina?',
+    options: [
+      'Kukaa kwa muda mfupi ili kuhakikisha kama maudhui hayo yanafaa kweli kuyaepuka',
+      'Kufunga ukurasa mara moja badala ya kuendelea kuutazama kwa udadisi',
+      'Kumtumia rafiki kiungo ili kupata maoni yake kabla ya kuamua',
+      'Kuendelea kuutazama ikiwa hakupanga kuutafuta maudhui hayo mwenyewe'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q19',
+    text: 'Ni kwa nini hata tovuti yenye maudhui mazuri inaweza kuwa tatizo kwa maisha ya kiroho ya kijana?',
+    options: [
+      'Kwa sababu tovuti nzuri zinaweza kumpa kijana taarifa nyingi kuliko anavyoweza kuzitumia',
+      'Kwa sababu matumizi yake yanaweza kugeuka uraibu na kuchukua muda unaohitajika kwa majukumu na mahusiano muhimu',
+      'Kwa sababu tovuti zote zinazofaa kwa Mkristo zinaweza kuwa na matangazo yasiyofaa',
+      'Kwa sababu muda wa mtandaoni hauwezi kamwe kuwa na thamani sawa na muda wa kusoma vitabu'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q20',
+    text: 'Kijana anatambua kuwa matumizi ya mitandao yanaingilia vipaumbele vyake. Ni hatua ipi inaendana zaidi na suluhisho lililotolewa katika semina?',
+    options: [
+      'Kujilazimisha kutumia mtandao zaidi ili hatimaye aweze kuuzoea na kuudhibiti',
+      'Kuficha matumizi yake ili watu wengine wasione kuwa ana tatizo',
+      'Kuchukua mapumziko ya intaneti au mitandao ya kijamii hadi aweze kurekebisha vipaumbele vyake',
+      'Kuacha kabisa shughuli zote za kijamii ili kupata muda zaidi wa kutumia intaneti kwa mpangilio'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q21',
+    text: 'Warumi 12:2 inatoa msingi gani muhimu kwa kijana anayekabiliwa na ushawishi wa maudhui ya kidijitali?',
+    options: [
+      'Kufuata mwenendo wa dunia ili kijana asitengane na kizazi chake',
+      'Kuepuka kila aina ya teknolojia ili kulinda maisha ya kiroho',
+      'Kufanywa upya nia ili kutambua mapenzi ya Mungu yaliyo mema, ya kumpendeza na makamilifu',
+      'Kuchagua maudhui yanayokubalika na watu wengi kwa sababu jamii ndiyo kipimo cha tabia'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q22',
+    text: 'Ni kwa nini 1 Wakorintho 6:19-20 inahusiana na uchaguzi wa maudhui na matumizi ya teknolojia?',
+    options: [
+      'Kwa sababu mwili wa Mkristo ni hekalu la Roho Mtakatifu na ni mali ya Mungu, hivyo matumizi yake yanahitaji hekima',
+      'Kwa sababu teknolojia inaweza kuharibu afya ya mwili ikiwa inatumiwa kwa muda mrefu',
+      'Kwa sababu vifaa vya kidijitali vinapaswa kutumiwa tu katika maeneo yanayomilikiwa na kanisa',
+      'Kwa sababu Mkristo anapaswa kutumia muda wake wote katika shughuli za kiroho badala ya teknolojia'
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 'semina10-q23',
+    text: 'Ni tofauti ipi kati ya intaneti na mitandao ya kijamii inayolingana na mfano uliotolewa katika semina?',
+    options: [
+      'Intaneti ni kifaa kinachotumiwa kuingia mtandaoni, wakati mitandao ya kijamii ni programu zinazotumika bila intaneti',
+      'Intaneti ni kama barabara kuu, huku mitandao ya kijamii ikiwa ni njia mbalimbali zinazotumiwa ndani ya njia hiyo',
+      'Intaneti na mitandao ya kijamii ni majina mawili ya teknolojia ileile yenye matumizi tofauti',
+      'Mitandao ya kijamii ndiyo inayounganisha vifaa duniani, huku intaneti ikiwa ni programu zinazotumiwa ndani yake'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q24',
+    text: 'Ni matumizi gani ya mtandao yanaonyeshwa katika semina kuwa yanaweza kuimarisha mahusiano yaliyopo?',
+    options: [
+      'Kuwasiliana na familia na marafiki walio mbali kupitia barua pepe, mazungumzo au kushirikisha picha',
+      'Kutafuta marafiki wapya bila kuwajulisha watu wazima kuhusu mawasiliano hayo',
+      'Kuepuka mawasiliano ya ana kwa ana kwa sababu mtandao hufanya mawasiliano kuwa rahisi zaidi',
+      'Kushirikisha taarifa binafsi kwa watu wapya ili kujenga uaminifu wa haraka'
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 'semina10-q25',
+    text: 'Kwa nini kupata marafiki wapya mtandaoni kunahitaji tahadhari zaidi kuliko kudumisha mahusiano yaliyopo?',
+    options: [
+      'Kwa sababu mawasiliano ya mtandaoni hayawezi kujenga uhusiano wa kweli na watu wengine',
+      'Kwa sababu watu wapya wanaokutana mtandaoni wanaweza kutoa taarifa za utambulisho ambazo si rahisi kuthibitisha',
+      'Kwa sababu vijana hawapaswi kuwa na marafiki ambao hawakusoma nao shule moja',
+      'Kwa sababu vyumba vya kuchati hutumiwa hasa kwa burudani kuliko kujenga mahusiano'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q26',
+    text: 'Kwa mujibu wa pendekezo la Dr. Tim Elmore katika semina, uwiano gani unapaswa kuzingatiwa kati ya muda wa skrini na mahusiano ya ana kwa ana?',
+    options: [
+      'Muda wa ana kwa ana uwe mkubwa mara mbili kuliko muda wa skrini ili kuhakikisha teknolojia haitumiki kupita kiasi',
+      'Muda wa skrini uwe mdogo kuliko muda wa shule kwa sababu elimu ndiyo kipaumbele pekee',
+      'Kwa kila saa ya muda wa skrini, kijana atumie kiasi kama hicho cha muda ana kwa ana na watu',
+      'Muda wa skrini usihesabiwe ikiwa unatumiwa kwa mawasiliano na watu anaowafahamu'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q27',
+    text: 'Ni kwa nini semina inashauri kuweka simu katika hali ya ukimya wakati wa mazungumzo ya ana kwa ana?',
+    options: [
+      'Ili kuzuia matumizi ya simu kabisa wakati wa shughuli za kijamii',
+      'Ili kuonyesha kwamba mtu aliye mbele yako ndiye kipaumbele na ujumbe wa simu unaweza kujibiwa baadaye',
+      'Ili kuzuia simu kutumia betri wakati mtu anazungumza',
+      'Ili kuhakikisha kwamba mazungumzo yote ya ana kwa ana hayakatizwi na taarifa za mtandaoni'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q28',
+    text: 'Ni lengo gani linaelezwa vizuri zaidi na wazo la “mfungo wa teknolojia”?',
+    options: [
+      'Kujifunza kuishi bila teknolojia kabisa kwa muda mrefu ili kuondoa utegemezi wake',
+      'Kuweka kando simu, tablet au kompyuta kwa muda ili kusaidia kurejesha uwiano na kudhibiti utegemezi',
+      'Kupunguza aina ya programu zinazotumiwa bila kubadili muda unaotumika mtandaoni',
+      'Kutumia teknolojia kwa shughuli za kiroho pekee bila kushughulikia matumizi mengine'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q29',
+    text: 'Kwa nini wazazi wanahimizwa kuzungumza na watoto kuhusu usalama wa mtandaoni kabla ya elimu ya sekondari?',
+    options: [
+      'Ili watoto wajifunze kutumia teknolojia bila kuhitaji mwongozo wanapofikia umri mkubwa',
+      'Ili wazazi waweze kuwazuia watoto kutumia mitandao ya kijamii kabisa',
+      'Ili kujenga uwajibikaji mapema na kusaidia kuzuia madhara kabla matatizo hayajatokea',
+      'Ili wazazi waweze kudhibiti kila mawasiliano ya watoto wao bila kuwapa nafasi ya faragha'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q30',
+    text: 'Ni kwa nini semina inawashauri wazazi kufuatilia matumizi ya simu na mitandao ya watoto wao kwa uwazi?',
+    options: [
+      'Kwa sababu watoto hawapaswi kuwa na faragha yoyote wanapotumia teknolojia',
+      'Kwa sababu ufuatiliaji wa wazi unaweza kusaidia uwajibikaji na kuzuia madhara huku mtoto akielewa sababu yake',
+      'Kwa sababu wazazi ndio wanaoweza kujua kila mtu anayewasiliana na mtoto mtandaoni',
+      'Kwa sababu mitandao ya kijamii haifai kutumiwa na watoto wanaoishi nyumbani'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q31',
+    text: 'Ni kwa nini vijana wanapaswa kufundishwa kuwa kile kinachowekwa mtandaoni kinaweza kubaki mtandaoni?',
+    options: [
+      'Kwa sababu taarifa zote zilizowekwa mtandaoni huhifadhiwa milele bila uwezekano wowote wa kufutwa',
+      'Kwa sababu kufuta taarifa hakuhakikishi kwamba hazitaendelea kuwepo au kusambazwa mahali pengine',
+      'Kwa sababu mitandao ya kijamii hairuhusu watumiaji kufuta picha au ujumbe wao',
+      'Kwa sababu taarifa za mtandaoni zinaweza kuonekana na kila mtu wakati wote bila kujali mipangilio ya faragha'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q32',
+    text: 'Kiongozi anataka kuwasaidia vijana kutumia mitandao ya kijamii kwa njia inayolingana na huduma ya Kikristo. Ni njia ipi inafaa zaidi?',
+    options: [
+      'Kuwahimiza kutumia mitandao mara nyingi kadiri iwezekanavyo ili kufikia watu wengi',
+      'Kuwafundisha kutumia fursa za kidijitali kwa hekima huku wakitambua na kuepuka hatari zake',
+      'Kuwashauri waepuke mitandao yote kwa sababu haiwezi kutenganishwa na hatari zake',
+      'Kuwapa uhuru wa kuchagua maudhui yao wenyewe mradi tu wasitumie muda wa shule'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q33',
+    text: 'Ni matumizi gani ya mitandao ya kijamii yanaweza kuhusishwa vizuri zaidi na kueneza injili kulingana na kanuni za semina?',
+    options: [
+      'Kusambaza ujumbe wa Biblia, matumaini na ushuhuda kwa njia inayoheshimu watu na kuonyesha upendo wa Kristo',
+      'Kuwashawishi watu kwa nguvu kwa kutumia mijadala mikali ili kutetea imani ya Kikristo',
+      'Kuchapisha taarifa nyingi za kidini bila kwanza kuhakikisha usahihi wake',
+      'Kuwalenga zaidi watu wanaokubaliana na imani ya Mkristo ili kuepuka mabishano'
+    ],
+    correctIndex: 0
+  },
+  {
+    id: 'semina10-q34',
+    text: 'Kijana anapokea ujumbe unaomdhalilisha mtu mwingine. Ni mwitikio upi unaolingana zaidi na kanuni za semina?',
+    options: [
+      'Kuupeleka kwa marafiki wachache ili wajue kinachoendelea bila kuhusika moja kwa moja',
+      'Kujibu kwa maneno makali ili kumlinda mtu anayelengwa na ujumbe huo',
+      'Kukataa kushiriki katika unyanyasaji huo na kuchagua mawasiliano yenye heshima',
+      'Kukaa kimya lakini kuendelea kusambaza ujumbe huo kwa watu wengine bila kutoa maoni'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q35',
+    text: 'Ni kwa nini semina inasisitiza kuwa chaguzi za mtandaoni zina matokeo?',
+    options: [
+      'Kwa sababu kila kitendo cha mtandaoni huleta adhabu ya moja kwa moja kutoka kwa mamlaka',
+      'Kwa sababu kile mtu anachochagua mtandaoni kinaweza kuathiri tabia, mahusiano, muda na maisha yake kwa ujumla',
+      'Kwa sababu matumizi yote ya mtandao yana madhara fulani hata yanapofanywa kwa kiasi',
+      'Kwa sababu teknolojia haiwezi kutumiwa bila mtu mwingine kuwajibika kwa matokeo yake'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q36',
+    text: 'Ni hali ipi inaonyesha utekelezaji mzuri zaidi wa ushauri wa semina kuhusu uwiano wa maisha?',
+    options: [
+      'Kijana anapunguza muda wa familia ili aweze kutumia teknolojia katika huduma zaidi',
+      'Kijana anatumia teknolojia kwa elimu na mawasiliano lakini anatenga muda wa Mungu, familia, shule, usingizi na mahusiano ya ana kwa ana',
+      'Kijana anaacha kabisa mitandao ya kijamii lakini anaendelea kutumia muda mwingi katika michezo ya kompyuta',
+      'Kijana anaweka simu karibu kila wakati ili aweze kujibu haraka watu wanaomhitaji'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q37',
+    text: 'Ni hatua ipi inaonyesha vizuri zaidi matumizi ya kanuni ya “fikiri kabla ya kutenda” katika mazingira ya kidijitali?',
+    options: [
+      'Kusubiri kuona watu wengine wataitikiaje ujumbe kabla ya kuamua kama ulikuwa sahihi',
+      'Kuchapisha ujumbe haraka ikiwa unaamini una jambo muhimu la kusema',
+      'Kutathmini maudhui, matokeo yanayoweza kutokea na ulinganifu wake na kanuni za Kikristo kabla ya kuchukua hatua',
+      'Kuepuka kuchapisha chochote kinachoweza kusababisha watu kutokubaliana na maoni yako'
+    ],
+    correctIndex: 2
+  },
+  {
+    id: 'semina10-q38',
+    text: 'Kijana anatambua kuwa hawezi kudhibiti matumizi yake ya intaneti. Ni hatua ipi inaendana zaidi na ushauri wa semina?',
+    options: [
+      'Kujitahidi kutatua tatizo peke yake ili asiwape wengine taarifa kuhusu udhaifu wake',
+      'Kuomba msaada kutoka kwa mzazi, mlezi au mtu mzima anayemwamini na anayejali',
+      'Kuhamisha matumizi yake kwenye kifaa kingine ili kupunguza uwezekano wa kuonekana',
+      'Kuacha shughuli nyingine kwa muda ili aweze kumaliza kile anachofanya mtandaoni'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q39',
+    text: 'Ni kauli ipi inaonyesha vizuri zaidi jukumu la kiongozi wa vijana katika ulimwengu wa kidijitali?',
+    options: [
+      'Kuwalinda vijana kwa kuwawekea marufuku nyingi iwezekanavyo dhidi ya matumizi ya teknolojia',
+      'Kuwa mfano wa matumizi yenye hekima na kuwasaidia vijana kuelewa fursa, hatari, usalama na uwiano',
+      'Kuwaacha vijana wajifunze kutokana na uzoefu wao kwa sababu teknolojia ni sehemu ya kizazi chao',
+      'Kuwafundisha kutumia programu maarufu zaidi ili huduma ya vijana iende sambamba na mabadiliko ya teknolojia'
+    ],
+    correctIndex: 1
+  },
+  {
+    id: 'semina10-q40',
+    text: 'Ni kauli ipi inatoa muhtasari sahihi zaidi wa ujumbe wa Semina ya 10 kuhusu teknolojia?',
+    options: [
+      'Teknolojia ni sehemu muhimu ya maisha ya vijana, hivyo changamoto yake kuu ni kuhakikisha inatumika kwa kiwango kikubwa',
+      'Teknolojia inaweza kuwa na manufaa katika mawasiliano, elimu na huduma, lakini inahitaji uchaguzi wa Kikristo, usalama na uwiano ili isigeuke kuwa kikwazo',
+      'Teknolojia inaweza kutumika vizuri na vijana ikiwa tu wazazi na viongozi watawazuia kutumia maeneo yenye hatari',
+      'Teknolojia ni njia yenye nguvu ya kufikisha ujumbe wa Kikristo, hivyo faida zake katika huduma zinapaswa kupewa kipaumbele kuliko hatari zake'
+    ],
+    correctIndex: 1
+  }
+]
 };
